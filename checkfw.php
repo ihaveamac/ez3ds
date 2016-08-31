@@ -262,7 +262,12 @@ if ($p_major == 8 && $p_minor == 1 && $p_nver == 0 && $p_model == "New" && $p_re
         if ($p_major == 5) {
           array_push($final_to_do, "6x update");
         }
-        array_push($final_to_do, "d9 no browser");
+        if ($p_major <= 6) {
+          array_push($final_to_do, "d9 no browser");
+        } else {
+          array_push($final_to_do, "90 to 107 update");
+          array_push($final_to_do, "hbl no browser downgrade");
+        }
       }
     }
   }
