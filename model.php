@@ -29,7 +29,7 @@ include_once("_header.php");
 
   <div class="visible-xs-inline-block"><h2>New 3DS</h2></div>
   <div class="hidden-xs"><h2>New 3DS</h2></div>
-  <a href="new">
+  <a href="new.php">
     <div class="row">
       <div class="col-sm-3 col-md-2 console">
         <span class="helper"></span>
