@@ -269,9 +269,12 @@ if ($p_major == 8 && $p_minor == 1 && $p_nver == 0 && $p_model == "New" && $p_re
   array_push($final_to_do, "ctrtransfer", "install a9lh");
 
   if ($p_major >= 9) {
-    array_push($final_exploits, "menuhax", "ninjhax", "freakyhax", "BASICSploit", "smilehax", "oot3dhax", "supermysterychunkhax", "(v*)hax", "humblehax", "basehaxx", "stickerhax");
+    array_push($final_exploits, "menuhax", "ninjhax", "freakyhax", "oot3dhax", "supermysterychunkhax", "(v*)hax", "humblehax", "basehaxx", "stickerhax");
     if ($p_model == "New") {
       array_push($final_exploits, "smashbroshax");
+    }
+    if ($p_region != "E") {
+      array_push($final_exploits, "BASICSploit", "smilehax");
     }
   }
 }
