@@ -10,8 +10,7 @@
         </ul>
         <div id="footer-info">
           <!-- yay copyrights and trademarks -->
-          <p>Some copyright and trademark stuff.</p>
-          <p>This site is not affiliated, sponsored, or otherwise endorsed by Nintendo Co., Ltd. Nintendo 3DS and others is a registered trademark by Nintendo Co., Ltd. All trademarks and registered trademarks are the property of their respective owners. </p>
+          <p>This site is not affiliated, sponsored, or otherwise endorsed by Nintendo Co., Ltd. Nintendo 3DS and others is a registered trademark by Nintendo Co., Ltd. All trademarks and registered trademarks are the property of their respective owners. This is a bunch of fun legal text, isn't it?</p>
           <p>This site is provided "as is" without warranty of any kind under the <a href="https://github.com/ihaveamac/ez3ds/blob/master/LICENSE.md">MIT License</a>.
           <p>Uses <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>. Front page design inspired by <a href="https://henkaku.xyz" target="_blank">HENkaku</a>. Thanks!</p>
         </div>

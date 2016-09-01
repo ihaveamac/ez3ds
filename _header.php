@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- because some people try to hack their 3DS without a computer -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Start running homebrew games, tools, and emulators on your Nintendo 3DS system today!">
   <title><?=$title?></title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <style>
@@ -32,6 +33,7 @@
       max-width: 427px; /* half of 854 */
       width: 100%;
       padding-bottom: 10px;
+      margin-left: 10px;
     }
     #footer-info {
       font-size: 12px;
