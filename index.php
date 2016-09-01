@@ -18,6 +18,5 @@ include_once("_header.php");
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam Pyrrho, Aristo, Erillus iam diu abiecti. Nos vero, inquit ille; Haec quo modo conveniant, non sane intellego. Sit enim idem caecus, debilis. Multoque hoc melius nos veriusque quam Stoici. Sed vos squalidius, illorum vides quam niteat oratio. Ut in geometria, prima si dederis, danda sunt omnia. Duo Reges: constructio interrete. Quae diligentissime contra Aristonem dicuntur a Chryippo. Quicquid enim a sapientia proficiscitur, id continuo debet expletum esse omnibus suis partibus; </p>
     <p>Si qua in iis corrigere voluit, deteriora fecit. In quibus doctissimi illi veteres inesse quiddam caeleste et divinum putaverunt. At cum de plurimis eadem dicit, tum certe de maximis. Itaque hic ipse iam pridem est reiectus; Progredientibus autem aetatibus sensim tardeve potius quasi nosmet ipsos cognoscimus. Experiamur igitur, inquit, etsi habet haec Stoicorum ratio difficilius quiddam et obscurius. Vitiosum est enim in dividendo partem in genere numerare. Ergo, inquit, tibi Q. </p>
   </p>
-  <p><a href="https://github.com/ihaveamac/ez3ds">Source on GitHub</a></p>
 </div>
 <?php include_once("_footer.php"); ?>
