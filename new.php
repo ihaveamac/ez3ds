@@ -58,7 +58,7 @@ include_once("_header.php");
       </select>
       -
       <select name="nver">
-        <option value="0" selected="selected">0</option>
+        <option value="0">0</option>
         <option value="20">20</option>
         <option value="21">21</option>
         <option value="22">22</option>
@@ -72,7 +72,7 @@ include_once("_header.php");
         <option value="30">30</option>
         <option value="31">31</option>
         <option value="32">32</option>
-        <option value="33">33</option>
+        <option value="33" selected="selected">33</option>
       </select>
       <select name="region">
         <option value="U" selected="selected">U</option>
