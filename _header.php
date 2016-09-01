@@ -28,6 +28,7 @@
     }
     #mset-scr {
       max-width: 400px;
+      image-rendering: pixelated;
     }
     #hb-demo {
       max-width: 427px; /* half of 854 */
@@ -42,6 +43,7 @@
     .title-icon, #mset-icn {
       height: 48px;
       border-radius: 4px;
+      image-rendering: pixelated;
     }
     .title-hax-name {
       font-size: 18px;
