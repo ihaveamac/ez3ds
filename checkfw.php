@@ -99,7 +99,7 @@ $info = array(
   "browser" => "<b>Browser installed</b> - This system has a browser, so one of the browser-based exploits should work fine. Note that browser exploits are not fully stable and might require a few tries to get working.",
   "new jpn 81" => "<b>New 3DS JPN 8.1</b> - This appears to be a New 3DS system with 8.1.0-0J. This system needs to be updated to 9.2.0 first. (The final result will be 9.1.0-20J, this is perfectly normal.)",
   "start on 21" => "<b>Start on 2.1.0-4</b> - This system is already on 2.1.0-4, so arm9loaderhax can be installed right away, then updated to 9.2.0-20 via ctrtransfer.",
-  "11" => "<b>11.0.0</b> - This system is on 11.0.0 or higher, which currently can't be downgraded with software only. A hardware mod is required, or DSiware + another 3DS system with custom firmware.",
+  "11" => "<b>11.0.0</b> - This system is on 11.0.0 or higher, which currently can't be downgraded with software only. If this console is to be downgraded, a hardware mod, or DSiware + another 3DS system with custom firmware, is required to downgrade the firmware.",
 );
 
 $to_do = array(
@@ -180,10 +180,33 @@ $to_do = array(
   ),
 );
 
+$to_do_homebrew = array(
+  "starter pack" => array(
+    "desc" => "Download the latest Homebrew Starter Kit.",
+    "link" => "https://smealum.github.io/ninjhax2/starter.zip",
+    "link-desc" => "Homebrew Starter Kit"
+  ),
+  "extract starter pack" => array(
+    "desc" => "Copy <code>boot.3dsx</code> and <code>3ds</code> to the root of your 3DS SD card."
+  ),
+  "enter hbl browser" => array(
+    "desc" => "Use the Internet Browser (or other exploit) to use the Homebrew Launcher.",
+    "link" => "https://yls8.mtheall.com/3dsbrowserhax.php",
+    "link-desc" => "Nintendo 3DS web-browser exploits"
+  ),
+  "enter hbl no browser" => array(
+    "desc" => "Use one of the exploits to use the Homebrew Launcher."
+  ),
+  "install secondary" => array(
+    "desc" => "<i>Recommended</i> - Install a secondary entrypoint. This is especially important if using browserhax, due to the version check and general instability. Note the date-time bypass (setting the date back to get around the version check) has been fixed since 10.7.0-32."
+  )
+);
+
 // TODO: maybe check for impossible versions (e.g. 4.7.0-33)
 
 $final_info = array();
 $final_to_do = array();
+$final_to_do_homebrew = array();
 $final_exploits = array();
 
 $p_model = $_POST["model"];
@@ -244,7 +267,6 @@ if ($p_major == 8 && $p_minor == 1 && $p_nver == 0 && $p_model == "New" && $p_re
     if ($p_major == 9) {
       if ($has_browser) {
         array_push($final_to_do, "hbl browser");
-        array_push($final_exploits, "browserhax");
       } else {
         array_push($final_to_do, "hbl no browser");
       }
@@ -274,12 +296,27 @@ if ($p_major == 8 && $p_minor == 1 && $p_nver == 0 && $p_model == "New" && $p_re
   array_push($final_to_do, "ctrtransfer", "install a9lh");
 
   if ($p_major >= 9) {
-    array_push($final_exploits, "menuhax", "ninjhax", "freakyhax", "oot3dhax", "supermysterychunkhax", "(v*)hax", "humblehax", "basehaxx", "stickerhax");
+    if ($has_browser) {
+      array_push($final_exploits, "browserhax");
+    }
+    if ($p_major != 11) {
+      array_push($final_exploits, "ninjhax");
+    }
+    array_push($final_exploits, "freakyhax", "menuhax", "oot3dhax", "supermysterychunkhax", "(v*)hax", "humblehax", "basehaxx", "stickerhax");
+    if ($p_region != "E") {
+      array_push($final_exploits, "BASICSploit", "smilehax");
+    }
     if ($p_model == "New") {
       array_push($final_exploits, "smashbroshax");
     }
-    if ($p_region != "E") {
-      array_push($final_exploits, "BASICSploit", "smilehax");
+  }
+
+  if (($p_major > 9 || ($p_major == 9 && $p_minor > 2 ))) {
+    array_push($final_to_do_homebrew, "starter pack", "extract starter pack");
+    if ($has_browser) {
+      array_push($final_to_do_homebrew, "enter hbl browser");
+    } else {
+      array_push($final_to_do_homebrew, "enter hbl no browser");
     }
   }
 }
@@ -287,6 +324,24 @@ if ($p_major == 8 && $p_minor == 1 && $p_nver == 0 && $p_model == "New" && $p_re
 $title = "ez3ds - Results for ".$p_model." 3DS ".$p_major.".".$p_minor.".".$p_revision."-".$p_nver.$p_region;
 include_once("_header.php");
 ?>
+<!-- Modal -->
+<div class="modal fade" id="diff" tabindex="-1" role="dialog" aria-labelledby="diff">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="modaltitle">Differences between "Homebrew" and "Custom Firmware"</h4>
+      </div>
+      <div class="modal-body">
+        <p>aaa</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="container">
   <h1>Results for <?=$p_model?> 3DS <?=$p_major.".".$p_minor.".".$p_revision."-".$p_nver.$p_region?></h1>
 <?php
@@ -297,13 +352,28 @@ foreach ($final_info as $value) {
 }
 echo "</ul>";
 
-echo "<h2>What to do</h2><ol>";
+echo "<h2>What to do</h2>";
+if (!empty($final_to_do_homebrew)) { // only show header if homebrew steps would be shown too
+  echo '<button type="button" class="btn btn-info" data-toggle="modal" data-target="#diff">Difference between "Homebrew" and "Custom Firmware"</button>';
+  echo "<h3>Custom Firmware</h3>";
+}
+echo "<ol>";
 foreach ($final_to_do as $value) {
   echo '<li><p>'.$to_do[$value]["desc"].'</p>';
   if (!empty($to_do[$value]["link"])) {
-    echo '<p><a class="btn btn-primary" href="'.$to_do[$value]["link"].'" role="button">'.$to_do[$value]["link-desc"].' <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a></p>';
+    echo '<p><a class="btn btn-primary" href="'.$to_do[$value]["link"].'" role="button" target="_blank">'.$to_do[$value]["link-desc"].' <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a></p>';
   }
-  echo '</li>';
+echo '</li>';
+}
+if (!empty($final_to_do_homebrew)) {
+  echo "</ol><h3>Homebrew</h3><ol>";
+  foreach ($final_to_do_homebrew as $value) {
+    echo '<li><p>'.$to_do_homebrew[$value]["desc"].'</p>';
+    if (!empty($to_do_homebrew[$value]["link"])) {
+      echo '<p><a class="btn btn-primary" href="'.$to_do_homebrew[$value]["link"].'" role="button" target="_blank">'.$to_do_homebrew[$value]["link-desc"].' <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a></p>';
+    }
+    echo '</li>';
+  }
 }
 echo "</ol>";
 
@@ -326,12 +396,12 @@ function print_exploit_info($key, $value) {
       <!-- hiding and showing different buttons for different alignment seems ugly -->
       <div class="hidden-xs">
         <div class="col-xs-9 col-sm-2 title-site-btn-normal">
-          <a class="btn btn-primary" href="<?=$value["url"]?>" role="button">Go to site <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+          <a class="btn btn-primary" href="<?=$value["url"]?>" role="button" target="_blank">Go to site <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
         </div>
       </div>
       <div class="visible-xs-block">
         <div class="col-xs-9 col-sm-2 title-site-btn-mobile">
-          <a class="btn btn-primary" href="<?=$value["url"]?>" role="button">Go to site <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+          <a class="btn btn-primary" href="<?=$value["url"]?>" role="button" target="_blank">Go to site <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
         </div>
       </div>
       <?php } ?>

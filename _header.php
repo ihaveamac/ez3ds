@@ -45,17 +45,11 @@
     /* thanks http://stackoverflow.com/questions/7273338/how-to-vertically-align-an-image-inside-div */
     div.console {
       text-align: center;
-      height: 160px;
+      height: 200px;
       white-space: nowrap;
-    }
-    .helper {
-      display: inline-block;
-      height: 100%;
-      vertical-align: middle;
     }
     img.console {
       width: 160px;
-      vertical-align: middle;
       max-width: 160px;
       max-height: 160px;
     }
