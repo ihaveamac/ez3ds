@@ -14,7 +14,7 @@
       padding-top: 10px;
     }
     footer {
-      margin: 25px 0;
+      margin: 0 0 25px 0;
     }
     .visible-xs-block, #mset-img {
       text-align: center;
@@ -32,6 +32,10 @@
       max-width: 427px; /* half of 854 */
       width: 100%;
       padding-bottom: 10px;
+    }
+    #footer-info {
+      font-size: 12px;
+      padding-top: 10px;
     }
     .title-icon, #mset-icn {
       height: 48px;

@@ -85,6 +85,5 @@ include_once("_header.php");
       <button type="button" class="btn btn-default" data-toggle="modal" data-target="#findfw">Where?</button>
     </p>
   </form>
-  <p><a href="index.php">Start over</a></p>
 </div>
 <?php include_once("_footer.php"); ?>

@@ -426,5 +426,5 @@ if (!empty($final_exploits)) {
     }
   }
 }
-echo '<p><a href="model.php">Start over</a></p></div>';
+echo '</div>';
 include_once("_footer.php");

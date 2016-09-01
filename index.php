@@ -12,7 +12,6 @@ include_once("_header.php");
   </div>
 </div>
 <div class="container">
-
   <h1>What is Homebrew?</h1>
   <p>
     <img id="hb-demo" class="pull-right" src="img/new3dsxl-hb.png">
