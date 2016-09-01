@@ -1,5 +1,5 @@
 <?php
-$title = "ez3ds - Nintendo 3DS hacking helper for noobs";
+$title = "ez3ds - Nintendo 3DS hax helper for noobs";
 include_once("_header.php");
 ?>
 <div class="jumbotron">
