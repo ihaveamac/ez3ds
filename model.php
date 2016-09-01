@@ -12,19 +12,19 @@ include_once("_header.php");
   <div class="hidden-xs"><h2>Old 3DS</h2></div>
   <div class="row">
     <div class="col-sm-3 col-md-3 col-xl-2 console">
-      <a class="btn btn-default" href="old.php" role="button">
+      <a class="btn btn-default" href="old3ds.php" role="button">
         <p><img class="console" src="img/old3ds.jpg"></p>
         Nintendo 3DS
       </a>
     </div>
     <div class="col-sm-3 col-md-3 col-xl-2 console">
-      <a class="btn btn-default" href="old.php" role="button">
+      <a class="btn btn-default" href="old3dsxl.php" role="button">
         <p><img class="console" src="img/old3dsxl.jpg"></p>
         Nintendo 3DS XL
       </a>
     </div>
     <div class="col-sm-3 col-md-3 col-xl-2 console">
-      <a class="btn btn-default" href="old.php" role="button">
+      <a class="btn btn-default" href="2ds.php" role="button">
         <p><img class="console" src="img/2ds.jpg"></p>
         Nintendo 2DS
       </a>

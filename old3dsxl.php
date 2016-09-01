@@ -1,5 +1,5 @@
 <?php
-$title = "ez3ds - New 3DS - Pick system version";
+$title = "ez3ds - Old 3DS - Pick system version";
 include_once("_header.php");
 ?>
 <!-- Modal -->
@@ -30,10 +30,15 @@ include_once("_header.php");
   <p>Note this only covers USA/EUR/JPN consoles (firmware ending in U/E/J).</p>
   <p>If your firmware is somehow not listed, create an issue on <a href="https://github.com/ihaveamac/ez3ds">GitHub</a>. Very new firmwares will be added soon after their release.</p>
   <form class="firmware" action="checkfw.php" method="post">
-    <input type="hidden" value="New" name="model">
+    <input type="hidden" value="Old" name="model">
     <p>
       <!-- default selected firmware is 11.0.0-33U -->
       <select name="major">
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
         <option value="8">8</option>
         <option value="9">9</option>
         <option value="10">10</option>
@@ -58,7 +63,21 @@ include_once("_header.php");
       </select>
       -
       <select name="nver">
-        <option value="0" selected="selected">0</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
         <option value="20">20</option>
         <option value="21">21</option>
         <option value="22">22</option>
@@ -72,7 +91,7 @@ include_once("_header.php");
         <option value="30">30</option>
         <option value="31">31</option>
         <option value="32">32</option>
-        <option value="33">33</option>
+        <option value="33" selected="selected">33</option>
       </select>
       <select name="region">
         <option value="U" selected="selected">U</option>

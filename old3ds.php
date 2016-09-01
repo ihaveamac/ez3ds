@@ -32,7 +32,7 @@ include_once("_header.php");
   <form class="firmware" action="checkfw.php" method="post">
     <input type="hidden" value="Old" name="model">
     <p>
-      <!-- default selected firmware is 9.2.0-20 -->
+      <!-- default selected firmware is 11.0.0-33U -->
       <select name="major">
         <option value="1">1</option>
         <option value="2">2</option>
