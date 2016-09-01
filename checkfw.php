@@ -227,7 +227,10 @@ if (($p_model != "New" && $p_model != "Old") ||
   die; // no u
 }
 
+// stupid shit
 if($p_minor==6&&$p_revision==0&&$p_major==3){header(hex2bin("4C6F636174696F6E3A2068747470733A2F2F68656E6B616B752E78797A"));die;}
+if($p_revision==0&&$p_major==5&&$p_minor==5){header(hex2bin("4C6F636174696F6E3A20687474703A2F2F6C6F616469696E652E6F7668"));die;}
+if($p_minor==6&&$p_major==6&&$p_revision==0){header(hex2bin("4C6F636174696F6E3A20687474703A2F2F776F6C6F6C6F2E6E65742F6366773464756D6D6965732F"));die;}
 
 // special check for 8.1.0-0J
 if ($p_major == 8 && $p_minor == 1 && $p_nver == 0 && $p_model == "New" && $p_region == "J") {
