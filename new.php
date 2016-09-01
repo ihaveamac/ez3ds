@@ -15,7 +15,7 @@ include_once("_header.php");
           <p>Find the <b>System Settings</b> icon on your HOME Menu.</p>
           <p><img id="mset-icn" src="img/game/mset.png"></p>
           <p>Find the version on the <b>top screen, bottom right corner</b>.<br>For example, 11.0.0-33U.</p>
-          <p><img id="mset-scr" src="img/mset-scr.png"></p>
+          <img id="mset-scr" src="img/mset-scr.png">
         </div>
       </div>
       <div class="modal-footer">
@@ -35,15 +35,15 @@ include_once("_header.php");
       <!-- default selected firmware is 9.2.0-20 -->
       <select name="major">
         <option value="8">8</option>
-        <option value="9" selected="selected">9</option>
+        <option value="9">9</option>
         <option value="10">10</option>
-        <option value="11">11</option>
+        <option value="11" selected="selected">11</option>
       </select>
       .
       <select name="minor">
-        <option value="0">0</option>
+        <option value="0" selected="selected">0</option>
         <option value="1">1</option>
-        <option value="2" selected="selected">2</option>
+        <option value="2">2</option>
         <option value="3">3</option>
         <option value="4">4</option>
         <option value="5">5</option>
@@ -58,8 +58,8 @@ include_once("_header.php");
       </select>
       -
       <select name="nver">
-        <option value="0">0</option>
-        <option value="20" selected="selected">20</option>
+        <option value="0" selected="selected">0</option>
+        <option value="20">20</option>
         <option value="21">21</option>
         <option value="22">22</option>
         <option value="23">23</option>
@@ -85,6 +85,6 @@ include_once("_header.php");
       <button type="button" class="btn btn-default" data-toggle="modal" data-target="#findfw">Where?</button>
     </p>
   </form>
-  <p><a href="model.php">Start over</a></p>
+  <p><a href="index.php">Start over</a></p>
 </div>
 <?php include_once("_footer.php"); ?>

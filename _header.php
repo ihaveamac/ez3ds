@@ -8,7 +8,14 @@
   <title><?=$title?></title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <style>
+    /* for future reference, 3DS color is #c52642 */
     /* I should clean this up, I know */
+    body {
+      padding-top: 10px;
+    }
+    footer {
+      margin: 25px 0;
+    }
     .visible-xs-block, #mset-img {
       text-align: center;
     }
@@ -20,6 +27,11 @@
     }
     #mset-scr {
       max-width: 400px;
+    }
+    #hb-demo {
+      max-width: 427px; /* half of 854 */
+      width: 100%;
+      padding-bottom: 10px;
     }
     .title-icon, #mset-icn {
       height: 48px;

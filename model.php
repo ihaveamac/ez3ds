@@ -47,5 +47,6 @@ include_once("_header.php");
       </a>
     </div>
   </div>
+  <p><a href="index.php">Start over</a></p>
 </div> <!-- .container -->
 <?php include_once("_footer.php"); ?>

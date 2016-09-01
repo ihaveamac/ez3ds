@@ -46,7 +46,7 @@ $hax_exploits = array(
     "title" => "The Legend of Zelda: Ocarina of Time 3D",
     "url" => "https://github.com/yellows8/oot3dhax",
     "primary" => false,
-    "other" => "Requires alternate entry point (any system) or Powersaves/save device for installation. Systems on stock 11.0.0-33 can't use the installer as of yet.",
+    "other" => "Requires alternate entry point (any system if game card) or Powersaves/save device for installation. Systems on stock 11.0.0-33 can't use the installer as of yet.",
     "icon" => "img/game/oot3d.png"
   ),
   "smashbroshax" => array(
@@ -60,7 +60,7 @@ $hax_exploits = array(
     "title" => "Pokémon Super Mystery Dungeon",
     "url" => "http://smd.salthax.org/",
     "primary" => false,
-    "other" => "Requires alternate entry point (any system) for installation.",
+    "other" => "Requires alternate entry point (any system if game card) for installation.",
     "icon" => "img/game/psmd.png"
   ),
   "(v*)hax" => array(
@@ -81,14 +81,14 @@ $hax_exploits = array(
     "title" => "Pokémon Omega Ruby and Alpha Sapphire",
     "url" => "http://mrnbayoh.github.io/basehaxx/",
     "primary" => false,
-    "other" => "Only works with 1.0 and 1.4. Requires alternate entry point (any system) for installation.",
+    "other" => "Only works with 1.0 and 1.4. Requires alternate entry point (any system if game card) for installation.",
     "icon" => "img/game/pkmnoras.png"
   ),
   "stickerhax" => array(
     "title" => "Paper Mario: Sticker Star",
     "url" => "https://github.com/yellows8/stickerhax",
     "primary" => false,
-    "other" => "Requires alternate entry point (any system) for installation.",
+    "other" => "Requires alternate entry point (any system if game card) for installation.",
     "icon" => "img/game/pmss.png"
   ),
 );
@@ -119,7 +119,7 @@ $to_do = array(
     "link-desc" => "Cart Update"
   ),
   "90 to 107 update" => array(
-    "desc" => "Update this system to a version between 9.0 - 10.7 using a game card. Note that updating to 9.9+ from 9.8 or lower will remove the browser!",
+    "desc" => "Update this system to a version between 9.0 - 10.7 using a game card. Note that updating to 9.9+ from 9.8 or lower will remove any installed browser!",
     "link" => "https://github.com/Plailect/Guide/wiki/Cart-Update",
     "link-desc" => "Cart Update"
   ),
@@ -223,7 +223,7 @@ if (($p_model != "New" && $p_model != "Old") ||
     ($p_revision != 0) ||
     ($p_nver < 0 || $p_nver > 33) ||
     ($p_region != "U" && $p_region != "E" && $p_region != "J")) {
-  echo 'you shouldn\'t see this page - if you do, create an issue on <a href="https://github.com/ihaveamac/ez3ds">GitHub</a>! include what options you picked.';
+  echo 'you shouldn\'t see this page - if you do, create an issue on <a href="https://github.com/ihaveamac/ez3ds">GitHub</a>! include what options you picked.<br><a href="model.php">Start over</a>';
   die; // no u
 }
 
@@ -333,7 +333,8 @@ include_once("_header.php");
         <h4 class="modal-title" id="modaltitle">Differences between "Homebrew" and "Custom Firmware"</h4>
       </div>
       <div class="modal-body">
-        <p>aaa</p>
+        <p>This is placeholder text! Because I suck at writing this.</p>
+        <p>If you can see this, and you want to write this, fork this and create a pull request! https://github.com/ihaveamac/ez3ds</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -354,8 +355,8 @@ echo "</ul>";
 
 echo "<h2>What to do</h2>";
 if (!empty($final_to_do_homebrew)) { // only show header if homebrew steps would be shown too
-  echo '<button type="button" class="btn btn-info" data-toggle="modal" data-target="#diff">Difference between "Homebrew" and "Custom Firmware"</button>';
-  echo "<h3>Custom Firmware</h3>";
+  // echo '<button type="button" class="btn btn-info" data-toggle="modal" data-target="#diff">What\'s the difference?</button>';
+  echo "<h3>Custom Firmware (recommended)</h3>";
 }
 echo "<ol>";
 foreach ($final_to_do as $value) {

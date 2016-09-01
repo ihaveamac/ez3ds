@@ -1,2 +1,2 @@
 # ez3ds
-Nintendo 3DS hacking helper for noobs
+Nintendo 3DS hax helper for noobs
