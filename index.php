@@ -37,8 +37,29 @@ include_once("_header.php");
   <p>In most cases, running homebrew on your console is 100% free using just the Internet Browser. There are also various other exploits in commercial games to get homebrew running.</p>
 
   <h2>What is Custom Firmware?</h2>
-  <p>Custom firmware ("CFW") enables you to use more advanced hacks that userland homebrew can't easily do. For instance, signature patches let you install unsigned titles that appear right on your HOME Menu, or let you use older Nintendo DS flash carts that were blocked long ago or never worked on Nintendo 3DS.</p>
+  <p>Custom firmware ("CFW") enables you to use more advanced hacks that userland homebrew can't easily do. For instance, signature patches let you install unsigned titles that appear right on your HOME Menu.</p>
   <p>CFW can be easily set up on any console that is on 9.2.0-20 or lower. Consoles on 10.7.0-32 or lower can be downgraded for free, those on 11.0.0 can be with hardware modifications (hardmod) or another system with CFW already set up.</p>
+
+  <h2>Why should I hack my console?</h2>
+  <p>With homebrew access, you can:</p>
+  <ul>
+    <li>Play many out of region game cards with Region free Launcher or HANS</li>
+    <li>Customize your HOME Menu with custom <a href="https://3dsthem.es" target="_blank">themes</a> and <a href="https://badges.3dsthem.es" target="_blank">badges</a></li>
+    <li>Use "ROM hacks" for games that you own and take gameplay screenshots with HANS</li>
+    <li><a href="https://gbatemp.net/threads/release-jks-savemanager-homebrew-cia-save-manager.413143/" target="_blank">Backup, edit, and restore</a> saves for many games</li>
+    <li>Play with various emulators for older systems with RetroArch and several standalone ones, best on New 3DS</li>
+    <li>Continue being able to use eShop and online gameplay without updating to the latest system version</li>
+  </ul>
+  <p>With using custom firmware, you can use everything listed above, in addition to:</p>
+  <ul>
+    <li>Install homebrew titles to your system, and have them appear on your HOME Menu</li>
+    <li>Dump your game cards to a format you can install, and play them without needing the card</li>
+    <li>New 3DS only: stream live gameplay to your PC wirelessly with NTR CFW</li>
+    <li>Play all games from any region easily, including ones Region free Launcher/HANS can't run</li>
+    <li>Run many old Nintendo DS flash carts that were blocked long ago or never worked on 3DS</li>
+    <li>Run custom firmware safely and reliably from boot with arm9loaderhax</li>
+    <li>Safely update to the latest system version without fear of losing access to homebrew</li>
+  </ul>
 
   <h2>How do I get these hacks?</h2>
   <p>Visit this website on your PC (if you aren't using one already), and click the "Start hax" button to begin the process.</p>
