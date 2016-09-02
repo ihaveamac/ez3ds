@@ -232,7 +232,7 @@ function print_exploit_info($key, $value) {
   <div class="well well-sm title-well">
     <div class="row">
       <div class="col-xs-3 col-sm-1">
-        <img class="title-icon" src="<?=$value["icon"]?>">
+        <img class="title-icon pixelated" src="<?=$value["icon"]?>">
       </div>
       <div class="col-xs-9 col-sm-9">
         <span class="title-hax-name"><?=$key?></span><br>

@@ -13,9 +13,9 @@ include_once("_header.php");
       <div class="modal-body">
         <div id="mset-img">
           <p>Find the <b>System Settings</b> icon on your HOME Menu.</p>
-          <p><img id="mset-icn" src="img/game/mset.png"></p>
+          <p><img id="mset-icn" class="pixelated" src="img/game/mset.png"></p>
           <p>Find the version on the <b>top screen, bottom right corner</b>.<br>For example, 11.0.0-33U.</p>
-          <img id="mset-scr" src="img/mset-scr.png">
+          <img id="mset-scr" class="pixelated" src="img/mset-scr.png">
         </div>
       </div>
       <div class="modal-footer">

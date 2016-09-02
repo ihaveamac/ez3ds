@@ -2,6 +2,26 @@
 $title = "ez3ds - Nintendo 3DS hax helper for noobs";
 include_once("_header.php");
 ?>
+<!-- Modal -->
+<div class="modal fade" id="hblpreview" tabindex="-1" role="dialog" aria-labelledby="hblpreview">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="modaltitle">Homebrew Launcher Preview</h4>
+      </div>
+      <div class="modal-body">
+        <div id="hblpreview-img">
+          <img class="pixelated" src="img/hblpreview.png">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="jumbotron">
   <div class="container">
     <h1>Nintendo 3DS hax helper</h1>
@@ -10,8 +30,9 @@ include_once("_header.php");
   </div>
 </div>
 <div class="container">
-  <h2>What is Homebrew?</h1>
-  <img id="hb-demo" class="pull-right" src="img/new3dsxl-hb.png">
+  <h2>What is Homebrew?</h2>
+  <!-- template used from https://github.com/RedInquisitive/Screenshot-Tool/tree/master/templates -->
+  <a href="#" data-toggle="modal" data-target="#hblpreview"><img id="hb-demo" class="pull-right" src="img/new3dsxl-hb.png"></a>
   <p><b><a href="https://en.wikipedia.org/wiki/List_of_homebrew_video_games" target="_blank">Homebrew</a></b> usually refers to software that is not authorized by Nintendo. It allows you to run homebrew games, tools like save editing and backup, and emulators for various older systems.</p>
   <p>In most cases, running homebrew on your console is 100% free using just the Internet Browser. There are also various other exploits in commercial games to get homebrew running.</p>
 

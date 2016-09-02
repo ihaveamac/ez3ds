@@ -13,6 +13,8 @@
     /* I should clean this up, I know */
     body {
       padding-top: 10px;
+      /* partly used from GitHub */
+      font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", Helvetica, Arial;
     }
     footer {
       margin: 0 0 25px 0;
@@ -23,18 +25,27 @@
     #mset-img img {
       width: 100%;
     }
+    #hblpreview-img {
+      text-align: center;
+    }
+    #hblpreview-img img {
+      width: 100%;
+      max-width: 602px;
+    }
     #mset-icn {
       max-width: 48px;
     }
     #mset-scr {
       max-width: 400px;
-      image-rendering: pixelated;
     }
     #hb-demo {
       max-width: 427px; /* half of 854 */
       width: 100%;
       padding-bottom: 10px;
       margin-left: 10px;
+    }
+    .pixelated {
+      image-rendering: pixelated;
     }
     #footer-info {
       font-size: 12px;
@@ -43,7 +54,6 @@
     .title-icon, #mset-icn {
       height: 48px;
       border-radius: 4px;
-      image-rendering: pixelated;
     }
     .title-hax-name {
       font-size: 18px;
