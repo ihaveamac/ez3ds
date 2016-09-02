@@ -124,6 +124,10 @@ if ($p_major == 8 && $p_minor == 1 && $p_nver == 0 && $p_model == "New" && $p_re
   }
   array_push($final_to_do, "ctrtransfer", "install a9lh");
 
+  // SmileBASIC USA lowest: 10.1.0-27U
+  // SmileBASIC JPN lowest: 9.2.0-20J?
+  // PSMD USA/JPN Lowest: 9.9
+  // PSMD EUR Lowest: 10.2
   if ($p_major >= 9) {
     if ($has_browser) {
       array_push($final_exploits, "browserhax");
@@ -131,9 +135,25 @@ if ($p_major == 8 && $p_minor == 1 && $p_nver == 0 && $p_model == "New" && $p_re
     if ($p_major != 11) {
       array_push($final_exploits, "ninjhax");
     }
-    array_push($final_exploits, "freakyhax", "menuhax", "oot3dhax", "supermysterychunkhax", "(v*)hax", "humblehax", "basehaxx", "stickerhax");
-    if ($p_region != "E") {
-      array_push($final_exploits, "BASICSploit", "smilehax");
+    array_push($final_exploits, "freakyhax", "menuhax", "oot3dhax", "(v*)hax", "humblehax", "basehaxx", "stickerhax");
+    if ($p_region == "J") {
+      if (($p_major > 9 || ($p_major == 9 && $p_minor >= 2 ))) {
+        array_push($final_exploits, "BASICSploit", "smilehax");
+      }
+      if (($p_major > 9 || ($p_major == 9 && $p_minor >= 9 ))) {
+        array_push($final_exploits, "supermysterychunkhax");
+      }
+    } elseif ($p_region == "U") {
+      if (($p_major > 10 || ($p_major == 10 && $p_minor >= 1 ))) {
+        array_push($final_exploits, "BASICSploit", "smilehax");
+      }
+      if (($p_major > 9 || ($p_major == 9 && $p_minor >= 9 ))) {
+        array_push($final_exploits, "supermysterychunkhax");
+      }
+    } elseif ($p_region == "E") {
+      if (($p_major > 10 || ($p_major == 10 && $p_minor >= 2 ))) {
+        array_push($final_exploits, "supermysterychunkhax");
+      }
     }
     if ($p_model == "New") {
       array_push($final_exploits, "smashbroshax");

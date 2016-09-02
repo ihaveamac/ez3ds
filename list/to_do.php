@@ -36,22 +36,22 @@ $to_do = array(
     "link-desc" => "9.2.0 ctrtransfer"
   ),
   "hbl browser" => array(
-    "desc" => "Enter the Homebrew Launcher, using the Internet Browser.",
+    "desc" => "Use the Internet Browser (or other exploit) to use the Homebrew Launcher.",
     "link" => "https://github.com/Plailect/Guide/wiki/Homebrew-Launcher-(Browser)",
     "link-desc" => "Homebrew Launcher (Browser)"
   ),
   "hbl no browser" => array(
-    "desc" => "Enter the Homebrew Launcher, using one of the game-based exploits.",
+    "desc" => "Use one of the exploits to use the Homebrew Launcher.",
     "link" => "https://github.com/Plailect/Guide/wiki/Homebrew-Launcher-(No-Browser)",
     "link-desc" => "Homebrew Launcher (No Browser)"
   ),
   "hbl browser downgrade" => array(
-    "desc" => "Enter the Homebrew Launcher, using the Internet Browser, and downgrade to 9.2.0.",
+    "desc" => "Use the Internet Browser (or other exploit) to use the Homebrew Launcher, and downgrade to 9.2.0.",
     "link" => "https://github.com/Plailect/Guide/wiki/Homebrew-Launcher-(Browser)",
     "link-desc" => "Homebrew Launcher (Browser)"
   ),
   "hbl no browser downgrade" => array(
-    "desc" => "Enter the Homebrew Launcher, using one of the game-based exploits, and downgrade to 9.2.0.",
+    "desc" => "Use one of the exploits to use the Homebrew Launcher, and downgrade to 9.2.0.",
     "link" => "https://github.com/Plailect/Guide/wiki/Homebrew-Launcher-(No-Browser)",
     "link-desc" => "Homebrew Launcher (No Browser)"
   ),

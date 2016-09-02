@@ -16,7 +16,7 @@ include_once("_header.php");
   <p>In most cases, running homebrew on your console is 100% free using just the Internet Browser. There are also various other exploits in commercial games to get homebrew running.</p>
 
   <h2>What is Custom Firmware?</h2>
-  <p>Custom firmware ("CFW") enables you to use more advanced hacks that userland homebrew can't easily do. For instance, signature patches let you install unsigned titles that appear right on your HOME Menu.</p>
+  <p>Custom firmware ("CFW") enables you to use more advanced hacks that userland homebrew can't easily do. For instance, signature patches let you install unsigned titles that appear right on your HOME Menu, or let you use older Nintendo DS flash carts that were blocked long ago or never worked on Nintendo 3DS.</p>
   <p>CFW can be easily set up on any console that is on 9.2.0-20 or lower. Consoles on 10.7.0-32 or lower can be downgraded for free, those on 11.0.0 can be with hardware modifications (hardmod) or another system with CFW already set up.</p>
 
   <h2>How do I get these hacks?</h2>
