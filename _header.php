@@ -12,7 +12,6 @@
     /* for future reference, 3DS color is #c52642 */
     /* I should clean this up, I know */
     body {
-      padding-top: 10px;
       /* partly used from GitHub */
       font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", Helvetica, Arial;
     }

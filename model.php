@@ -11,19 +11,19 @@ include_once("_header.php");
   <div class="visible-xs-block"><h2>Old 3DS</h2></div>
   <div class="hidden-xs"><h2>Old 3DS</h2></div>
   <div class="row">
-    <div class="col-sm-3 col-md-3 col-xl-2 console">
+    <div class="col-xs-12 col-sm-4 col-md-4 col-xl-4 console">
       <a class="btn btn-default" href="old3ds.php" role="button">
         <p><img class="console" src="img/old3ds.jpg"></p>
         Nintendo 3DS
       </a>
     </div>
-    <div class="col-sm-3 col-md-3 col-xl-2 console">
+    <div class="col-xs-12 col-sm-4 col-md-4 col-xl-4 console">
       <a class="btn btn-default" href="old3dsxl.php" role="button">
         <p><img class="console" src="img/old3dsxl.jpg"></p>
         Nintendo 3DS XL
       </a>
     </div>
-    <div class="col-sm-3 col-md-3 col-xl-2 console">
+    <div class="col-xs-12 col-sm-4 col-md-4 col-xl-4 console">
       <a class="btn btn-default" href="2ds.php" role="button">
         <p><img class="console" src="img/2ds.jpg"></p>
         Nintendo 2DS
@@ -34,13 +34,13 @@ include_once("_header.php");
   <div class="visible-xs-inline-block"><h2>New 3DS</h2></div>
   <div class="hidden-xs"><h2>New 3DS</h2></div>
   <div class="row">
-    <div class="col-sm-3 col-md-3 col-xl-2 console">
+    <div class="col-xs-12 col-sm-6 col-md-6 col-xl-6 console">
       <a class="btn btn-default" href="new.php" role="button">
         <p><img class="console" src="img/new3ds.jpg"></p>
         New Nintendo 3DS
       </a>
     </div>
-    <div class="col-sm-3 col-md-3 col-xl-2 console">
+    <div class="col-xs-12 col-sm-6 col-md-6 col-xl-6 console">
       <a class="btn btn-default" href="new.php" role="button">
         <p><img class="console" src="img/new3dsxl.jpg"></p>
         New Nintendo 3DS XL
