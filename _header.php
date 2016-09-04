@@ -8,9 +8,14 @@
   <meta name="description" content="Start running homebrew games, tools, and emulators on your Nintendo 3DS system today!">
   <title><?=$title?></title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.0/css/bootstrap-select.min.css">
   <style>
     /* for future reference, 3DS color is #c52642 */
     /* I should clean this up, I know */
+    /*select {
+      -webkit-appearance: menulist-button;
+      font-size: 15px;
+    }*/
     body {
       /* partly used from GitHub */
       font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", Helvetica, Arial;
@@ -18,7 +23,7 @@
     footer {
       margin: 0 0 25px 0;
     }
-    .visible-xs-block, #mset-img {
+    .visible-xs-block, #mset-img, .firmware {
       text-align: center;
     }
     #mset-img img {

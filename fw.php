@@ -34,7 +34,7 @@ include_once("_header.php");
     <input type="hidden" value="<?=$model?>" name="model">
     <p>
       <!-- default selected firmware is 11.0.0-33U -->
-      <select name="major">
+      <select class="selectpicker" data-width="auto" name="major">
         <?php if ($_GET["lv"] <= 1) { ?>
         <option value="1">1</option>
         <option value="2">2</option>
@@ -53,7 +53,7 @@ include_once("_header.php");
         <?php } ?>
       </select>
       .
-      <select name="minor">
+      <select class="selectpicker" data-width="auto" name="minor">
         <option value="0" selected="selected">0</option>
         <option value="1">1</option>
         <option value="2">2</option>
@@ -66,11 +66,11 @@ include_once("_header.php");
         <option value="9">9</option>
       </select>
       .
-      <select name="revision">
+      <select class="selectpicker" data-width="auto" name="revision">
         <option value="0" selected="selected">0</option>
       </select>
       -
-      <select name="nver">
+      <select class="selectpicker" data-width="auto" name="nver">
         <?php if ($_GET["lv"] <= 1 || $_GET["lv"] == 4) { ?>
         <option value="0">0</option>
         <?php } if ($_GET["lv"] <= 1) { ?>
@@ -112,7 +112,7 @@ include_once("_header.php");
         <option value="33" selected="selected">33</option>
         <?php } ?>
       </select>
-      <select name="region">
+      <select class="selectpicker" data-width="auto" name="region">
         <option value="U" selected="selected">U</option>
         <option value="E">E</option>
         <option value="J">J</option>
