@@ -1,5 +1,6 @@
 <?php
-$title = "ez3ds - Old 3DS - Pick system version";
+$model = ($_GET["lv"] >= 4) ? "New" : "Old";
+$title = "ez3ds - ".$model." 3DS - Pick system version";
 include_once("_header.php");
 ?>
 <!-- Modal -->
@@ -30,16 +31,26 @@ include_once("_header.php");
   <p>Note this only covers USA/EUR/JPN consoles (firmware ending in U/E/J).</p>
   <p>If your firmware is somehow not listed, create an issue on <a href="https://github.com/ihaveamac/ez3ds">GitHub</a>. Very new firmwares will be added soon after their release.</p>
   <form class="firmware" action="checkfw.php" method="post">
-    <input type="hidden" value="Old" name="model">
+    <input type="hidden" value="<?=$model?>" name="model">
     <p>
       <!-- default selected firmware is 11.0.0-33U -->
       <select name="major">
+        <?php if ($_GET["lv"] <= 1) { ?>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <?php } if ($_GET["lv"] <= 2) { ?>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <?php } if ($_GET["lv"] <= 3) { ?>
         <option value="6">6</option>
         <option value="7">7</option>
+        <?php } if ($_GET["lv"] <= 4) { ?>
         <option value="8">8</option>
         <option value="9">9</option>
         <option value="10">10</option>
         <option value="11" selected="selected">11</option>
+        <?php } ?>
       </select>
       .
       <select name="minor">
@@ -60,6 +71,21 @@ include_once("_header.php");
       </select>
       -
       <select name="nver">
+        <?php if ($_GET["lv"] <= 1 || $_GET["lv"] == 4) { ?>
+        <option value="0">0</option>
+        <?php } if ($_GET["lv"] <= 1) { ?>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <?php } if ($_GET["lv"] <= 2) { ?>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <?php } if ($_GET["lv"] <= 3) { ?>
         <option value="11">11</option>
         <option value="12">12</option>
         <option value="13">13</option>
@@ -69,6 +95,7 @@ include_once("_header.php");
         <option value="17">17</option>
         <option value="18">18</option>
         <option value="19">19</option>
+        <?php } if ($_GET["lv"] <= 4) { ?>
         <option value="20">20</option>
         <option value="21">21</option>
         <option value="22">22</option>
@@ -83,6 +110,7 @@ include_once("_header.php");
         <option value="31">31</option>
         <option value="32">32</option>
         <option value="33" selected="selected">33</option>
+        <?php } ?>
       </select>
       <select name="region">
         <option value="U" selected="selected">U</option>
