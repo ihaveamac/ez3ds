@@ -136,7 +136,7 @@ if ($p_major == 8 && $p_minor == 1 && $p_nver == 0 && $p_model == "New" && $p_re
     if ($p_major != 11) {
       array_push($final_exploits, "ninjhax");
     }
-    array_push($final_exploits, "freakyhax", "menuhax", "oot3dhax", "(v*)hax", "humblehax", "basehaxx", "stickerhax");
+    array_push($final_exploits, "freakyhax", "menuhax", "oot3dhax", "(v*)hax", "humblehax", "basehaxx", "stickerhax", "steelhax");
     if ($p_region == "J") {
       if (($p_major > 9 || ($p_major == 9 && $p_minor >= 2 ))) {
         array_push($final_exploits, "BASICSploit", "smilehax");
