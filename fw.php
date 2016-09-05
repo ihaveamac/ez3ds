@@ -30,7 +30,7 @@ include_once("_header.php");
   <h1>Pick system version</h1>
   <p>Note this only covers USA/EUR/JPN consoles (firmware ending in U/E/J).</p>
   <p>If your firmware is somehow not listed, create an issue on <a href="https://github.com/ihaveamac/ez3ds">GitHub</a>. Very new firmwares will be added soon after their release.</p>
-  <form class="firmware" action="checkfw.php" method="post">
+  <form class="firmware" action="checkfw.php" method="get">
     <input type="hidden" value="<?=$model?>" name="model">
     <p>
       <!-- default selected firmware is 11.0.0-33U -->

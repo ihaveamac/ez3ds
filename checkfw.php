@@ -33,12 +33,12 @@ $final_to_do = array();
 $final_to_do_homebrew = array();
 $final_exploits = array();
 
-$p_model = $_POST["model"];
-$p_major = $_POST["major"];
-$p_minor = $_POST["minor"];
-$p_revision = $_POST["revision"];
-$p_nver = $_POST["nver"];
-$p_region = $_POST["region"];
+$p_model = $_GET["model"];
+$p_major = $_GET["major"];
+$p_minor = $_GET["minor"];
+$p_revision = $_GET["revision"];
+$p_nver = $_GET["nver"];
+$p_region = $_GET["region"];
 
 // prevent impossible values that aren't normally selectable
 if (($p_model != "New" && $p_model != "Old") ||
