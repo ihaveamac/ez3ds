@@ -41,7 +41,7 @@ include_once("_header.php");
   <p>CFW can be easily set up on any console that is on 9.2.0-20 or lower. Consoles on 10.7.0-32 or lower can be downgraded for free, those on 11.0.0 can be with hardware modifications (hardmod) or another system with CFW already set up.</p>
 
   <h2>Why should I hack my console?</h2>
-  <p>With homebrew access, you can:</p>
+  <p>With Homebrew access, you can:</p>
   <ul>
     <li>Play many out of region game cards with Region free Launcher or HANS</li>
     <li>Customize your HOME Menu with custom <a href="https://3dsthem.es" target="_blank">themes</a> and <a href="https://badges.3dsthem.es" target="_blank">badges</a></li>
@@ -50,7 +50,7 @@ include_once("_header.php");
     <li>Play games for older systems with various emulators, using RetroArch or other standalone emulators. (Works best with a New Nintendo 3DS)</li>
     <li>Continue being able to use Nintendo eShop and online gameplay without updating to the latest system version</li>
   </ul>
-  <p>With using custom firmware, you can use everything listed above, in addition to:</p>
+  <p>With using Custom Firmware, you can use everything listed above, in addition to:</p>
   <ul>
     <li>Install homebrew titles to your system, and have them appear on your HOME Menu</li>
     <li>Dump your game cards to a format you can install, and play them without needing the card</li>

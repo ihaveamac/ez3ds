@@ -167,6 +167,7 @@ if ($p_major == 8 && $p_minor == 1 && $p_nver == 0 && $p_model == "New" && $p_re
     } else {
       array_push($final_to_do_homebrew, "enter hbl no browser");
     }
+    array_push($final_to_do_homebrew, "install secondary");
   }
 }
 
