@@ -8,7 +8,7 @@ include_once("_header.php");
   <p>Click your model!<p>
 
   <!-- this sucks, but what is even a better way -->
-  <div class="visible-xs-block"><h2>Old 3DS</h2></div>
+  <div class="visible-xs-block center"><h2>Old 3DS</h2></div>
   <div class="hidden-xs"><h2>Old 3DS</h2></div>
   <div class="row">
     <div class="col-xs-12 col-sm-4 col-md-4 col-xl-4 console">
@@ -31,7 +31,7 @@ include_once("_header.php");
     </div>
   </div>
 
-  <div class="visible-xs-inline-block"><h2>New 3DS</h2></div>
+  <div class="visible-xs-block center"><h2>New 3DS</h2></div>
   <div class="hidden-xs"><h2>New 3DS</h2></div>
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-md-6 col-xl-6 console">

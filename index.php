@@ -11,7 +11,7 @@ include_once("_header.php");
         <h4 class="modal-title" id="modaltitle">Homebrew Launcher Preview</h4>
       </div>
       <div class="modal-body">
-        <div id="hblpreview-img">
+        <div id="hblpreview-img" class="center">
           <img class="pixelated" src="img/hblpreview.png">
         </div>
       </div>
@@ -26,7 +26,7 @@ include_once("_header.php");
   <div class="container">
     <h1>Nintendo 3DS hax helper</h1>
     <p>Start running homebrew games, tools, and emulators on your Nintendo 3DS system today!</p>
-    <p><a class="btn btn-danger btn-lg" href="model.php" role="button">Start hax</a></p>
+    <p><a class="btn btn-custom btn-lg" href="model.php" role="button">Start hax</a></p>
   </div>
 </div>
 <div class="container">

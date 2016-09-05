@@ -12,7 +12,7 @@ include_once("_header.php");
         <h4 class="modal-title" id="modaltitle">Find system version</h4>
       </div>
       <div class="modal-body">
-        <div id="mset-img">
+        <div id="mset-img" class="center">
           <p>Find the <b>System Settings</b> icon on your HOME Menu.</p>
           <p><img id="mset-icn" class="pixelated" src="img/game/mset.png"></p>
           <p>Find the version on the <b>top screen, bottom right corner</b>.<br>For example, 11.0.0-33U.</p>
@@ -30,11 +30,11 @@ include_once("_header.php");
   <h1>Pick system version</h1>
   <p>Note this only covers USA/EUR/JPN consoles (firmware ending in U/E/J).</p>
   <p>If your firmware is somehow not listed, create an issue on <a href="https://github.com/ihaveamac/ez3ds">GitHub</a>. Very new firmwares will be added soon after their release.</p>
-  <form class="firmware" action="checkfw.php" method="get">
+  <form class="firmware center" action="checkfw.php" method="get">
     <input type="hidden" value="<?=$model?>" name="model">
     <p>
       <!-- default selected firmware is 11.0.0-33U -->
-      <select class="selectpicker" data-width="auto" name="major">
+      <select class="selectpicker show-menu-arrow" data-width="auto" name="major">
         <?php if ($_GET["lv"] <= 1) { ?>
         <option value="1">1</option>
         <option value="2">2</option>
@@ -53,7 +53,7 @@ include_once("_header.php");
         <?php } ?>
       </select>
       .
-      <select class="selectpicker" data-width="auto" name="minor">
+      <select class="selectpicker show-menu-arrow" data-width="auto" name="minor">
         <option value="0" selected="selected">0</option>
         <option value="1">1</option>
         <option value="2">2</option>
@@ -66,11 +66,11 @@ include_once("_header.php");
         <option value="9">9</option>
       </select>
       .
-      <select class="selectpicker" data-width="auto" name="revision">
+      <select class="selectpicker show-menu-arrow" data-width="auto" name="revision">
         <option value="0" selected="selected">0</option>
       </select>
       -
-      <select class="selectpicker" data-width="auto" name="nver">
+      <select class="selectpicker show-menu-arrow" data-width="auto" name="nver">
         <?php if ($_GET["lv"] <= 1 || $_GET["lv"] == 4) { ?>
         <option value="0">0</option>
         <?php } if ($_GET["lv"] <= 1) { ?>
@@ -112,7 +112,7 @@ include_once("_header.php");
         <option value="33" selected="selected">33</option>
         <?php } ?>
       </select>
-      <select class="selectpicker" data-width="auto" name="region">
+      <select class="selectpicker show-menu-arrow" data-width="auto" name="region">
         <option value="U" selected="selected">U</option>
         <option value="E">E</option>
         <option value="J">J</option>

@@ -10,12 +10,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.0/css/bootstrap-select.min.css">
   <style>
-    /* for future reference, 3DS color is #c52642 */
+    /* for future reference, 3DS color is #CE181E */
     /* I should clean this up, I know */
-    /*select {
-      -webkit-appearance: menulist-button;
-      font-size: 15px;
-    }*/
     body {
       /* partly used from GitHub */
       font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", Helvetica, Arial;
@@ -23,14 +19,11 @@
     footer {
       margin: 0 0 25px 0;
     }
-    .visible-xs-block, #mset-img, .firmware {
+    .center {
       text-align: center;
     }
     #mset-img img {
       width: 100%;
-    }
-    #hblpreview-img {
-      text-align: center;
     }
     #hblpreview-img img {
       width: 100%;
@@ -86,6 +79,37 @@
       width: 160px;
       max-width: 160px;
       max-height: 160px;
+    }
+
+    /* used from http://twitterbootstrap3buttons.w3masters.nl/?color=%23CE181E */
+    .btn-custom {
+      background-color: #CE181E;
+      border-color: #CE181E;
+      color: white;
+    }
+    .btn-custom:hover,
+    .btn-custom:focus,
+    .btn-custom:active,
+    .btn-custom.active {
+      background-color: #b7151b;
+      border-color: #a01317;
+      color: white;
+    }
+    .btn-custom.disabled:hover,
+    .btn-custom.disabled:focus,
+    .btn-custom.disabled:active,
+    .btn-custom.disabled.active,
+    .btn-custom[disabled]:hover,
+    .btn-custom[disabled]:focus,
+    .btn-custom[disabled]:active,
+    .btn-custom[disabled].active,
+    fieldset[disabled] .btn-custom:hover,
+    fieldset[disabled] .btn-custom:focus,
+    fieldset[disabled] .btn-custom:active,
+    fieldset[disabled] .btn-custom.active {
+      background-color: #CE181E;
+      border-color: #CE181E;
+      color: white;
     }
   </style>
 </head>

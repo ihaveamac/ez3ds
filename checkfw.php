@@ -216,9 +216,9 @@ foreach ($final_to_do as $value) {
     echo '<p><img src="'.$to_do[$value]["image"].'"></p>';
   }
   if (!empty($to_do[$value]["link"])) {
-    echo '<p><a class="btn btn-primary" href="'.$to_do[$value]["link"].'" role="button" target="_blank">'.$to_do[$value]["link-desc"].' <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a></p>';
+    echo '<p><a class="btn btn-primary btn-sm" href="'.$to_do[$value]["link"].'" role="button" target="_blank">'.$to_do[$value]["link-desc"].' <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a></p>';
   }
-echo '</li>';
+  echo '</li>';
 }
 if (!empty($final_to_do_homebrew)) {
   echo "</ol><h3>Homebrew</h3><ol>";
@@ -228,7 +228,7 @@ if (!empty($final_to_do_homebrew)) {
       echo '<p><img src="'.$to_do_homebrew[$value]["image"].'"></p>';
     }
     if (!empty($to_do_homebrew[$value]["link"])) {
-      echo '<p><a class="btn btn-primary" href="'.$to_do_homebrew[$value]["link"].'" role="button" target="_blank">'.$to_do_homebrew[$value]["link-desc"].' <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a></p>';
+      echo '<p><a class="btn btn-primary btn-sm" href="'.$to_do_homebrew[$value]["link"].'" role="button" target="_blank">'.$to_do_homebrew[$value]["link-desc"].' <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a></p>';
     }
     echo '</li>';
   }
