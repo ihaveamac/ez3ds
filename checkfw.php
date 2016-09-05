@@ -14,7 +14,8 @@ $to_do_homebrew = array(
     "desc" => "Copy <code>boot.3dsx</code> and <code>3ds</code> to the root of your 3DS SD card."
   ),
   "enter hbl browser" => array(
-    "desc" => "Use the Internet Browser (or other exploit) to use the Homebrew Launcher.",
+    "desc" => "Use the Internet Browser (or other exploit) to use the Homebrew Launcher.<br>The QR code can be scanned at the HOME Menu by pressing L+R for the Camera.<br>If the exploit is unstable, try resetting the browser data first.",
+    "image" => "https://yls8.mtheall.com/3dsbrowserhax_auto_qrcode.png",
     "link" => "https://yls8.mtheall.com/3dsbrowserhax.php",
     "link-desc" => "Nintendo 3DS web-browser exploits"
   ),
@@ -211,6 +212,9 @@ if (!empty($final_to_do_homebrew)) { // only show header if homebrew steps would
 echo "<ol>";
 foreach ($final_to_do as $value) {
   echo '<li><p>'.$to_do[$value]["desc"].'</p>';
+  if (!empty($to_do[$value]["image"])) {
+    echo '<p><img src="'.$to_do[$value]["image"].'"></p>';
+  }
   if (!empty($to_do[$value]["link"])) {
     echo '<p><a class="btn btn-primary" href="'.$to_do[$value]["link"].'" role="button" target="_blank">'.$to_do[$value]["link-desc"].' <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a></p>';
   }
@@ -220,6 +224,9 @@ if (!empty($final_to_do_homebrew)) {
   echo "</ol><h3>Homebrew</h3><ol>";
   foreach ($final_to_do_homebrew as $value) {
     echo '<li><p>'.$to_do_homebrew[$value]["desc"].'</p>';
+    if (!empty($to_do_homebrew[$value]["image"])) {
+      echo '<p><img src="'.$to_do_homebrew[$value]["image"].'"></p>';
+    }
     if (!empty($to_do_homebrew[$value]["link"])) {
       echo '<p><a class="btn btn-primary" href="'.$to_do_homebrew[$value]["link"].'" role="button" target="_blank">'.$to_do_homebrew[$value]["link-desc"].' <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a></p>';
     }
