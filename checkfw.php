@@ -86,6 +86,9 @@ if ($p_major == 8 && $p_minor == 1 && $p_nver == 0 && $p_model == "New" && $p_re
     array_push($final_info, "11");
     array_push($final_to_do, "fw downgrade");
   }
+  if (($p_major == 11 && $p_minor == 0) || $p_major == 10 || ($p_major == 9 && $p_minor > 2)) {
+    array_push($final_info, "downgradable");
+  }
 
   if (($p_major > 9 || ($p_major == 9 && $p_minor > 2 ))) {
     if ($has_browser) {

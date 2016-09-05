@@ -6,4 +6,5 @@ $info = array(
   "new jpn 81" => "<b>New 3DS JPN 8.1</b> - This appears to be a New 3DS system with 8.1.0-0J. This system needs to be updated to 9.2.0 first. (The final result will be 9.1.0-20J, this is perfectly normal.)",
   "start on 21" => "<b>Start on 2.1.0-4</b> - This system is already on 2.1.0-4, so arm9loaderhax can be installed right away, then updated to 9.2.0-20 via ctrtransfer.",
   "11" => "<b>11.0.0</b> - This system is on 11.0.0 or higher, which currently can't be downgraded with software only. Only userland homebrew can be used. To downgrade, a hardware mod, or DSiware + another 3DS system with custom firmware, is required to downgrade the firmware.",
+  "downgradable" => "<b>Downgradable</b> - This system can be downgraded to 9.2.0-20, allowing for custom firmware to be set up.",
 );
