@@ -32,7 +32,7 @@ include_once("_header.php");
   <p>If your firmware is somehow not listed, create an issue on <a href="https://github.com/ihaveamac/ez3ds">GitHub</a>. Very new firmwares will be added soon after their release.</p>
   <?php
   if (isset($_GET["bad"])) {
-    echo '<div class="alert alert-warning" role="alert">The version you input is not valid.</div>';
+    echo '<div class="alert alert-warning" role="alert">The version you input is not valid. Please try again.</div>';
   }
   ?>
   <form class="firmware center" action="checkfw.php" method="get">
