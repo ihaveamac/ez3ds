@@ -29,6 +29,10 @@ $to_do_homebrew = array(
 
 // TODO: maybe check for impossible versions (e.g. 4.7.0-33)
 
+function redir_bad_ver() {
+  header("Location: fw.php?bad");
+}
+
 $final_info = array();
 $final_to_do = array();
 $final_to_do_homebrew = array();
@@ -48,7 +52,7 @@ if (($p_model != "New" && $p_model != "Old") ||
     ($p_revision != 0) ||
     ($p_nver < 0 || $p_nver > 33) ||
     ($p_region != "U" && $p_region != "E" && $p_region != "J")) {
-  echo 'you shouldn\'t see this page - if you do, create an issue on <a href="https://github.com/ihaveamac/ez3ds">GitHub</a>! include what options you picked.<br><a href="model.php">Start over</a>';
+  redir_bad_ver();
   die; // no u
 }
 
@@ -56,6 +60,53 @@ if (($p_model != "New" && $p_model != "Old") ||
 if($p_minor==6&&$p_revision==0&&$p_major==3){header(hex2bin("4C6F636174696F6E3A2068747470733A2F2F68656E6B616B752E78797A"));die;}
 if($p_revision==0&&$p_major==5&&$p_minor==5){header(hex2bin("4C6F636174696F6E3A20687474703A2F2F6C6F616469696E652E6F7668"));die;}
 if($p_minor==6&&$p_major==6&&$p_revision==0){header(hex2bin("4C6F636174696F6E3A20687474703A2F2F776F6C6F6C6F2E6E65742F6366773464756D6D6965732F"));die;}
+
+// check for invalid versions
+// if there's a better way to do this, tell me
+if (($p_major == 1 && $p_minor == 0 && $p_nver > 0) ||   // 1.0.0-0
+    ($p_major == 1 && $p_minor == 1 && $p_nver > 1) ||   // 1.1.0-1
+    ($p_major == 2 && $p_minor == 0 && $p_nver > 2) ||   // 2.0.0-2
+    ($p_major == 2 && $p_minor == 1 && $p_nver > 4) ||   // 2.1.0-3
+    ($p_major == 2 && $p_minor == 2 && $p_nver > 4) ||   // 2.2.0-4
+    ($p_major == 3 && $p_minor == 0 && $p_nver > 6) ||   // 3.2.0-6
+    ($p_major == 4 && $p_minor == 0 && $p_nver > 7) ||   // 4.0.0-7
+    ($p_major == 4 && $p_minor == 1 && $p_nver > 8) ||   // 4.1.0-8
+    ($p_major == 4 && $p_minor == 2 && $p_nver > 9) ||   // 4.2.0-9
+    ($p_major == 4 && $p_minor == 3 && $p_nver > 10) ||  // 4.3.0-10
+    ($p_major == 4 && $p_minor == 4 && $p_nver > 10) ||  // 4.4.0-10
+    ($p_major == 4 && $p_minor == 5 && $p_nver > 10) ||  // 4.5.0-10
+    ($p_major == 5 && $p_minor == 0 && $p_nver > 11) ||  // 5.0.0-11
+    ($p_major == 5 && $p_minor == 1 && $p_nver > 11) ||  // 5.1.0-11
+    ($p_major == 6 && $p_minor == 0 && $p_nver > 12) ||  // 6.0.0-12
+    ($p_major == 6 && $p_minor == 1 && $p_nver > 12) ||  // 6.1.0-12
+    ($p_major == 6 && $p_minor == 2 && $p_nver > 12) ||  // 6.2.0-12
+    ($p_major == 6 && $p_minor == 3 && $p_nver > 12) ||  // 6.3.0-12
+    ($p_major == 7 && $p_minor == 0 && $p_nver > 13) ||  // 7.0.0-13
+    ($p_major == 7 && $p_minor == 1 && $p_nver > 16) ||  // 7.1.0-16
+    ($p_major == 7 && $p_minor == 2 && $p_nver > 17) ||  // 7.2.0-17
+    ($p_major == 8 && $p_minor == 0 && $p_nver > 18) ||  // 8.0.0-18
+    ($p_major == 8 && $p_minor == 1 && $p_nver > 19) ||  // 8.1.0-19
+    ($p_major == 9 && $p_minor == 0 && $p_nver > 20) ||  // 9.0.0-20
+    ($p_major == 9 && $p_minor == 1 && $p_nver > 20) ||  // 9.1.0-20
+    ($p_major == 9 && $p_minor == 2 && $p_nver > 20) ||  // 9.2.0-20
+    ($p_major == 9 && $p_minor == 3 && $p_nver > 21) ||  // 9.3.0-21
+    ($p_major == 9 && $p_minor == 4 && $p_nver > 21) ||  // 9.4.0-21
+    ($p_major == 9 && $p_minor == 5 && $p_nver > 23) ||  // 9.5.0-23
+    ($p_major == 9 && $p_minor == 6 && $p_nver > 24) ||  // 9.6.0-24
+    ($p_major == 9 && $p_minor == 7 && $p_nver > 25) ||  // 9.7.0-25
+    ($p_major == 9 && $p_minor == 8 && $p_nver > 25) ||  // 9.8.0-25
+    ($p_major == 9 && $p_minor == 9 && $p_nver > 26) ||  // 9.9.0-26
+    ($p_major == 10 && $p_minor == 0 && $p_nver > 27) || // 10.0.0-27
+    ($p_major == 10 && $p_minor == 1 && $p_nver > 27) || // 10.1.0-17
+    ($p_major == 10 && $p_minor == 2 && $p_nver > 28) || // 10.2.0-28
+    ($p_major == 10 && $p_minor == 3 && $p_nver > 28) || // 10.3.0-28
+    ($p_major == 10 && $p_minor == 4 && $p_nver > 29) || // 10.4.0-29
+    ($p_major == 10 && $p_minor == 5 && $p_nver > 30) || // 10.5.0-30
+    ($p_major == 10 && $p_minor == 6 && $p_nver > 31) || // 10.6.0-31
+    ($p_major == 10 && $p_minor == 7 && $p_nver > 32) || // 10.7.0-32
+    ($p_major == 11 && $p_minor == 0 && $p_nver > 33)) { // 11.0.0-33
+  redir_bad_ver();
+}
 
 // special check for 8.1.0-0J
 if ($p_major == 8 && $p_minor == 1 && $p_nver == 0 && $p_model == "New" && $p_region == "J") {

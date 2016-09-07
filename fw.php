@@ -30,6 +30,11 @@ include_once("_header.php");
   <h1>Pick system version</h1>
   <p>Note this only covers USA/EUR/JPN consoles (firmware ending in U/E/J).</p>
   <p>If your firmware is somehow not listed, create an issue on <a href="https://github.com/ihaveamac/ez3ds">GitHub</a>. Very new firmwares will be added soon after their release.</p>
+  <?php
+  if (isset($_GET["bad"])) {
+    echo '<div class="alert alert-warning" role="alert">The version you input is not valid.</div>';
+  }
+  ?>
   <form class="firmware center" action="checkfw.php" method="get">
     <input type="hidden" value="<?=$model?>" name="model">
     <p>
