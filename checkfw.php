@@ -40,8 +40,7 @@ $p_nver = $_GET["nver"];
 $p_region = $_GET["region"];
 
 // prevent impossible values that aren't normally selectable
-if (($p_lv > 4 || $p_lv < 1) ||
-    ($p_model != "New" && $p_model != "Old") ||
+if (($p_model != "New" && $p_model != "Old") ||
     ($p_major < 1 || $p_major > 11) ||
     ($p_minor < 0 || $p_minor > 9) ||
     ($p_revision != 0) ||
