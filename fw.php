@@ -37,6 +37,7 @@ include_once("_header.php");
   ?>
   <form class="firmware center" action="checkfw.php" method="get">
     <input type="hidden" value="<?=$model?>" name="model">
+    <input type="hidden" value="<?=$_GET["lv"]?>" name="lv">
     <p>
       <!-- default selected firmware is 11.0.0-33U -->
       <select class="selectpicker show-menu-arrow" data-width="auto" name="major">

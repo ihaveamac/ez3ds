@@ -5,6 +5,11 @@ include_once("_header.php");
 <!-- images from https://github.com/Plailect/Guide/wiki/Device-Info -->
 <div class="container">
   <h1 class="page-header">Pick system model</h1>
+  <?php
+  if (isset($_GET["bad"])) {
+    echo '<div class="alert alert-warning" role="alert"><p>There was an error trying to use the inputted data.</p><p>If this happens repeatedly, please <a href="https://github.com/ihaveamac/ez3ds/issues">create a new issue on GitHub</a>.</p></div>';
+  }
+  ?>
 
   <!-- this sucks, but what is even a better way -->
   <div class="visible-xs-block center"><h2>Old 3DS</h2></div>

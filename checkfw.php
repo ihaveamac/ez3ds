@@ -27,16 +27,13 @@ $to_do_homebrew = array(
   )
 );
 
-function redir_bad_ver() {
-  header("Location: fw.php?bad");
-}
-
 $final_info = array();
 $final_to_do = array();
 $final_to_do_homebrew = array();
 $final_exploits = array();
 
 $p_model = $_GET["model"];
+$p_lv = $_GET["lv"];
 $p_major = $_GET["major"];
 $p_minor = $_GET["minor"];
 $p_revision = $_GET["revision"];
@@ -44,13 +41,14 @@ $p_nver = $_GET["nver"];
 $p_region = $_GET["region"];
 
 // prevent impossible values that aren't normally selectable
-if (($p_model != "New" && $p_model != "Old") ||
+if (($p_lv > 4 || $p_lv < 1) ||
+    ($p_model != "New" && $p_model != "Old") ||
     ($p_major < 1 || $p_major > 11) ||
     ($p_minor < 0 || $p_minor > 9) ||
     ($p_revision != 0) ||
     ($p_nver < 0 || $p_nver > 34) ||
     ($p_region != "U" && $p_region != "E" && $p_region != "J")) {
-  redir_bad_ver();
+  header("Location: model.php?bad");
   die; // no u
 }
 
@@ -115,10 +113,12 @@ if (($p_major == 1 && $p_minor == 0 && $p_nver > 0) ||   // 1.0.0-0
     ($p_major == 11 && $p_minor == 0 && $p_nver > 33) || // 11.0.0-33
     ($p_major == 11 && $p_minor == 1 && $p_nver > 34) || // 11.1.0-34
     ($p_major == 11 && $p_minor > 1)) {
-  redir_bad_ver();
+  header("Location: fw.php?lv=".$_GET["lv"]."&bad");
+  die; // no u
 }
 
 // special check for 8.1.0-0J
+$downgradable = true; // also applies to 9.2 and lower, though won't show "downgradable" notice then
 if ($p_major == 8 && $p_minor == 1 && $p_nver == 0 && $p_model == "New" && $p_region == "J") {
   array_push($final_info, "new jpn 81");
   array_push($final_to_do, "new jpn 81 update", "hbl browser", "ctrtransfer", "install a9lh");
@@ -132,7 +132,7 @@ if ($p_major == 8 && $p_minor == 1 && $p_nver == 0 && $p_model == "New" && $p_re
   }
 
   // check if downgradable
-  $downgradable = true; // also applies to 9.2 and lower, though won't show "downgradable" notice then
+
   if (($p_major == 11 && $p_minor == 0) || $p_major == 10 || ($p_major == 9 && $p_minor > 2)) {
     array_push($final_info, "downgradable");
   } elseif (($p_major == 11 && $p_minor > 0) || $p_major > 11) {
