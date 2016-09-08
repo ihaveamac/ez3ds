@@ -129,6 +129,9 @@ if ($p_major == 8 && $p_minor == 1 && $p_nver == 0 && $p_model == "New" && $p_re
   array_push($final_to_do, "start on 21 install");
 } else {
   // check if an actual browser is installed
+  if (($p_major == 11 && $p_minor == 0) || $p_major == 10 || ($p_major == 9 && $p_minor > 2)) {
+    array_push($final_info, "downgradable");
+  }
   $has_browser = true;
   if ($p_nver < 26) { // at this point game card updates won't install dummy browser
     if (($p_major == 9 && $p_minor == 9) || ($p_major > 9)) { // check for 9.9 and nver below 26
@@ -147,9 +150,6 @@ if ($p_major == 8 && $p_minor == 1 && $p_nver == 0 && $p_model == "New" && $p_re
   if ($p_major == 11) {
     array_push($final_info, "11");
     array_push($final_to_do, "fw downgrade");
-  }
-  if (($p_major == 11 && $p_minor == 0) || $p_major == 10 || ($p_major == 9 && $p_minor > 2)) {
-    array_push($final_info, "downgradable");
   }
 
   if (($p_major > 9 || ($p_major == 9 && $p_minor > 2 ))) {
@@ -263,11 +263,19 @@ include_once("_header.php");
   <h1>Results for <?=$p_model?> 3DS <?=$p_major.".".$p_minor.".".$p_revision."-".$p_nver.$p_region?></h1>
 <?php
 
-echo "<h2>Information</h2><ul>";
+echo "<h2>Information</h2>";//<ul>";
 foreach ($final_info as $value) {
-  echo "<li>".$info[$value]."</li>";
-}
-echo "</ul>";
+  //echo "<li>".$info[$value]."</li>";
+  ?>
+  <div class="panel panel-<?=$info[$value]["style"]?>">
+    <div class="panel-heading">
+      <h3 class="panel-title"><?=$info[$value]["title"]?></h3>
+    </div>
+    <div class="panel-body">
+      <?=$info[$value]["desc"]?>
+    </div>
+  </div>
+<?php }
 
 echo "<h2>What to do</h2>";
 if (!empty($final_to_do_homebrew)) { // only show header if homebrew steps would be shown too
