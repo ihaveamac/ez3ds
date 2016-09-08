@@ -277,7 +277,7 @@ include_once("_header.php");
 </div>
 
 <div class="container">
-  <h1>Results for <?=$p_model?> 3DS <?=$p_major.".".$p_minor.".".$p_revision."-".$p_nver.$p_region?></h1>
+  <h1 class="page-header">Results for <?=$p_model?> 3DS <?=$p_major.".".$p_minor.".".$p_revision."-".$p_nver.$p_region?></h1>
 <?php
 
 echo "<h2>Information</h2>";//<ul>";
@@ -315,7 +315,7 @@ if (!empty($final_to_do_homebrew)) {
   foreach ($final_to_do_homebrew as $value) {
     echo '<li><p>'.$to_do_homebrew[$value]["desc"].'</p>';
     if (!empty($to_do_homebrew[$value]["image"])) {
-      echo '<p><img src="'.$to_do_homebrew[$value]["image"].'"></p>';
+      echo '<p><img src="'.$to_do_homebrew[$value]["image"].'" class="pixelated"></p>';
     }
     if (!empty($to_do_homebrew[$value]["link"])) {
       echo '<p><a class="btn btn-primary btn-sm" href="'.$to_do_homebrew[$value]["link"].'" role="button" target="_blank">'.$to_do_homebrew[$value]["link-desc"].' <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a></p>';
@@ -327,46 +327,41 @@ echo "</ol>";
 
 function print_exploit_info($key, $value) {
 ?>
+<li>
   <div class="well well-sm title-well">
-    <div class="row">
-      <div class="col-xs-3 col-sm-1">
-        <img class="title-icon pixelated" src="<?=$value["icon"]?>">
+    <div class="media">
+      <div class="media-left">
+        <img class="media-object title-icon pixelated" src="<?=$value["icon"]?>" alt="<?=$key?>">
       </div>
-      <div class="col-xs-9 col-sm-9">
-        <span class="title-hax-name"><?=$key?></span><br>
-        <span class="title-name"><?=$value["title"]?></span>
+      <div class="media-body">
+        <h4 class="media-heading"><?=$key?></h4>
+        <?=$value["title"]?>
         <?php if ($value["other"] != "") { ?><br>
         <span class="title-other"><?=$value["other"]?></span>
+        <?php } if (!empty($value["url"])) { ?>
+        <div class="title-site-btn">
+          <a class="btn btn-primary" href="<?=$value["url"]?>" role="button" target="_blank">Go to site <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+        </div>
         <?php } ?>
       </div>
-      <?php if (!empty($value["url"])) { ?>
-      <div class="visible-xs-block col-xs-3"></div>
-      <!-- hiding and showing different buttons for different alignment seems ugly -->
-      <div class="hidden-xs">
-        <div class="col-xs-9 col-sm-2 title-site-btn-normal">
-          <a class="btn btn-primary" href="<?=$value["url"]?>" role="button" target="_blank">Go to site <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-        </div>
-      </div>
-      <div class="visible-xs-block">
-        <div class="col-xs-9 col-sm-2 title-site-btn-mobile">
-          <a class="btn btn-primary" href="<?=$value["url"]?>" role="button" target="_blank">Go to site <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-        </div>
-      </div>
-      <?php } ?>
     </div>
   </div>
+</li>
 <?php
 }
 
 if (!empty($final_exploits)) {
-  echo "<h2>List of usable exploits</h2>";
-  echo "<h3>Primary</h3>";
+  echo '<h2>List of usable exploits</h2>';
+  echo '<h3>Primary</h3>';
+  echo '<div class="hax-list row container"><ul class="list-unstyled">';
   foreach ($final_exploits as $value) {
     if ($hax_exploits[$value]["primary"]) {
       print_exploit_info($value, $hax_exploits[$value]);
     }
   }
+  echo '</div>';
   echo "<h3>Secondary</h3>";
+  echo '<div class="hax-list row container"><ul class="list-unstyled">';
   foreach ($final_exploits as $value) {
     if (!$hax_exploits[$value]["primary"]) {
       print_exploit_info($value, $hax_exploits[$value]);

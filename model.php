@@ -4,8 +4,7 @@ include_once("_header.php");
 ?>
 <!-- images from https://github.com/Plailect/Guide/wiki/Device-Info -->
 <div class="container">
-  <h1>Pick system model</h1>
-  <p>Click your model!<p>
+  <h1 class="page-header">Pick system model</h1>
 
   <!-- this sucks, but what is even a better way -->
   <div class="visible-xs-block center"><h2>Old 3DS</h2></div>
