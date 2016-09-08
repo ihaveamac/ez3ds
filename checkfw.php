@@ -33,7 +33,6 @@ $final_to_do_homebrew = array();
 $final_exploits = array();
 
 $p_model = $_GET["model"];
-$p_lv = $_GET["lv"];
 $p_major = $_GET["major"];
 $p_minor = $_GET["minor"];
 $p_revision = $_GET["revision"];
@@ -113,7 +112,7 @@ if (($p_major == 1 && $p_minor == 0 && $p_nver > 0) ||   // 1.0.0-0
     ($p_major == 11 && $p_minor == 0 && $p_nver > 33) || // 11.0.0-33
     ($p_major == 11 && $p_minor == 1 && $p_nver > 34) || // 11.1.0-34
     ($p_major == 11 && $p_minor > 1)) {
-  header("Location: fw.php?lv=".$_GET["lv"]."&bad");
+  header("Location: model.php?bad");
   die; // no u
 }
 
@@ -132,7 +131,6 @@ if ($p_major == 8 && $p_minor == 1 && $p_nver == 0 && $p_model == "New" && $p_re
   }
 
   // check if downgradable
-
   if (($p_major == 11 && $p_minor == 0) || $p_major == 10 || ($p_major == 9 && $p_minor > 2)) {
     array_push($final_info, "downgradable");
   } elseif (($p_major == 11 && $p_minor > 0) || $p_major > 11) {

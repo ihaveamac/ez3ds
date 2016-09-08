@@ -7,7 +7,7 @@ include_once("_header.php");
   <h1 class="page-header">Pick system model</h1>
   <?php
   if (isset($_GET["bad"])) {
-    echo '<div class="alert alert-warning" role="alert"><p>There was an error trying to use the inputted data.</p><p>If this happens repeatedly, please <a href="https://github.com/ihaveamac/ez3ds/issues">create a new issue on GitHub</a>.</p></div>';
+    echo '<div class="alert alert-warning" role="alert"><p>There was an error trying to use the inputted data, or the version input was invalid. Please try again.</p><p>If this happens repeatedly, please <a href="https://github.com/ihaveamac/ez3ds/issues">create a new issue on GitHub</a>.</p></div>';
   }
   ?>
 
