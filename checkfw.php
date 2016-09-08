@@ -114,8 +114,8 @@ if (($p_major == 1 && $p_minor == 0 && $p_nver > 0) ||   // 1.0.0-0
     ($p_major == 10 && $p_minor == 6 && $p_nver > 31) || // 10.6.0-31
     ($p_major == 10 && $p_minor == 7 && $p_nver > 32) || // 10.7.0-32
     ($p_major == 10 && $p_minor > 7) ||
-    ($p_major == 11 && $p_minor == 0 && $p_nver > 33)) { // 11.0.0-33
-    ($p_major == 11 && $p_minor > 0) ||
+    ($p_major == 11 && $p_minor == 0 && $p_nver > 33) || // 11.0.0-33
+    ($p_major == 11 && $p_minor > 0)) {
   redir_bad_ver();
 }
 
