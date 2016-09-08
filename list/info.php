@@ -40,4 +40,14 @@ $info = array(
     "style" => "success",
     "desc" => "This system can be downgraded to 9.2.0-20, allowing for custom firmware to be set up.",
   ),
+  "not downgradable" => array(
+    "title" => "Not downgradable",
+    "style" => "danger",
+    "desc" => "This system can not be downgraded to 9.2.0-20 as the current version is too new.",
+  ),
+  "doesnt exist" => array(
+    "title" => "Doesn't exist",
+    "style" => "info",
+    "desc" => "This firmware doesn't actually exist yet, it is only based on estimations. This will change if and when this update is released.",
+  ),
 );

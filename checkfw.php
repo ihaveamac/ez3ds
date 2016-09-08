@@ -50,7 +50,7 @@ if (($p_model != "New" && $p_model != "Old") ||
     ($p_major < 1 || $p_major > 11) ||
     ($p_minor < 0 || $p_minor > 9) ||
     ($p_revision != 0) ||
-    ($p_nver < 0 || $p_nver > 33) ||
+    ($p_nver < 0 || $p_nver > 34) ||
     ($p_region != "U" && $p_region != "E" && $p_region != "J")) {
   redir_bad_ver();
   die; // no u
@@ -115,7 +115,8 @@ if (($p_major == 1 && $p_minor == 0 && $p_nver > 0) ||   // 1.0.0-0
     ($p_major == 10 && $p_minor == 7 && $p_nver > 32) || // 10.7.0-32
     ($p_major == 10 && $p_minor > 7) ||
     ($p_major == 11 && $p_minor == 0 && $p_nver > 33) || // 11.0.0-33
-    ($p_major == 11 && $p_minor > 0)) {
+    ($p_major == 11 && $p_minor == 1 && $p_nver > 34) || // 11.1.0-34
+    ($p_major == 11 && $p_minor > 1)) {
   redir_bad_ver();
 }
 
@@ -128,10 +129,20 @@ if ($p_major == 8 && $p_minor == 1 && $p_nver == 0 && $p_model == "New" && $p_re
   array_push($final_info, "start on 21");
   array_push($final_to_do, "start on 21 install");
 } else {
-  // check if an actual browser is installed
+  if ($p_major == 11 && $p_minor == 1) {
+    array_push($final_info, "doesnt exist");
+  }
+
+  // check if downgradable
+  $downgradable = true; // also applies to 9.2 and lower, though won't show "downgradable" notice then
   if (($p_major == 11 && $p_minor == 0) || $p_major == 10 || ($p_major == 9 && $p_minor > 2)) {
     array_push($final_info, "downgradable");
+  } elseif (($p_major == 11 && $p_minor > 0) || $p_major > 11) {
+    array_push($final_info, "not downgradable");
+    $downgradable = false;
   }
+
+  // check if an actual *exploitable* browser is installed
   $has_browser = true;
   if ($p_nver < 26) { // at this point game card updates won't install dummy browser
     if (($p_major == 9 && $p_minor == 9) || ($p_major > 9)) { // check for 9.9 and nver below 26
@@ -144,10 +155,15 @@ if ($p_major == 8 && $p_minor == 1 && $p_nver == 0 && $p_model == "New" && $p_re
       array_push($final_info, "browser");
     }
   } else {
-    array_push($final_info, "browser");
+    if ($p_nver <= 33) {
+      array_push($final_info, "browser");
+    } else {
+      array_push($final_info, "browser no exploit");
+      $has_browser = false;
+    }
   }
 
-  if ($p_major == 11) {
+  if ($p_major == 11 && $p_minor == 0) {
     array_push($final_info, "11");
     array_push($final_to_do, "fw downgrade");
   }
@@ -195,13 +211,16 @@ if ($p_major == 8 && $p_minor == 1 && $p_nver == 0 && $p_model == "New" && $p_re
   // PSMD USA/JPN Lowest: 9.9
   // PSMD EUR Lowest: 10.2
   if ($p_major >= 9) {
-    if ($has_browser) {
-      array_push($final_exploits, "browserhax");
+    if ($p_nver <= 33) {
+      if ($has_browser) {
+        array_push($final_exploits, "browserhax");
+      }
+      array_push($final_exploits, "menuhax");
     }
     if ($p_major != 11) {
       array_push($final_exploits, "ninjhax");
     }
-    array_push($final_exploits, "freakyhax", "menuhax", "oot3dhax", "(v*)hax", "humblehax", "basehaxx", "stickerhax", "steelhax");
+    array_push($final_exploits, "freakyhax", "oot3dhax", "(v*)hax", "humblehax", "basehaxx", "stickerhax", "steelhax");
     if ($p_region == "J") {
       if (($p_major > 9 || ($p_major == 9 && $p_minor >= 2 ))) {
         array_push($final_exploits, "BASICSploit", "smilehax");
@@ -278,23 +297,23 @@ foreach ($final_info as $value) {
 <?php }
 
 echo "<h2>What to do</h2>";
-if (!empty($final_to_do_homebrew)) { // only show header if homebrew steps would be shown too
-  // echo '<button type="button" class="btn btn-info" data-toggle="modal" data-target="#diff">What\'s the difference?</button>';
+if ($downgradable) {
   echo "<h3>Custom Firmware (recommended)</h3>";
-}
-echo "<ol>";
-foreach ($final_to_do as $value) {
-  echo '<li><p>'.$to_do[$value]["desc"].'</p>';
-  if (!empty($to_do[$value]["image"])) {
-    echo '<p><img src="'.$to_do[$value]["image"].'"></p>';
+  echo "<ol>";
+  foreach ($final_to_do as $value) {
+    echo '<li><p>'.$to_do[$value]["desc"].'</p>';
+    if (!empty($to_do[$value]["image"])) {
+      echo '<p><img src="'.$to_do[$value]["image"].'"></p>';
+    }
+    if (!empty($to_do[$value]["link"])) {
+      echo '<p><a class="btn btn-primary btn-sm" href="'.$to_do[$value]["link"].'" role="button" target="_blank">'.$to_do[$value]["link-desc"].' <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a></p>';
+    }
+    echo '</li>';
   }
-  if (!empty($to_do[$value]["link"])) {
-    echo '<p><a class="btn btn-primary btn-sm" href="'.$to_do[$value]["link"].'" role="button" target="_blank">'.$to_do[$value]["link-desc"].' <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a></p>';
-  }
-  echo '</li>';
+  echo "</ol>";
 }
 if (!empty($final_to_do_homebrew)) {
-  echo "</ol><h3>Homebrew</h3><ol>";
+  echo "<h3>Homebrew</h3><ol>";
   foreach ($final_to_do_homebrew as $value) {
     echo '<li><p>'.$to_do_homebrew[$value]["desc"].'</p>';
     if (!empty($to_do_homebrew[$value]["image"])) {
