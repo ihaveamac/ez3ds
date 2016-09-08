@@ -33,7 +33,7 @@ $info = array(
   "11" => array(
     "title" => "11.0.0",
     "style" => "danger",
-    "desc" => "<p>This system is on 11.0.0 or higher, which currently can't be downgraded with software only. Only userland homebrew can be used.</p>To downgrade, a hardware mod, or DSiware + another 3DS system with custom firmware, is required to downgrade the firmware.",
+    "desc" => "<p>This system is on 11.0.0, which currently can't be downgraded with software only. Only userland homebrew can be used.</p>To downgrade, a hardware mod, or DSiware + another 3DS system with custom firmware, is required to downgrade the firmware.",
   ),
   "downgradable" => array(
     "title" => "Downgradable",
@@ -43,7 +43,7 @@ $info = array(
   "not downgradable" => array(
     "title" => "Not downgradable",
     "style" => "danger",
-    "desc" => "This system can not be downgraded to 9.2.0-20 as the current version is too new.",
+    "desc" => "This system can not be downgraded to 9.2.0-20 for custom firmware as the current version is too new.",
   ),
   "doesnt exist" => array(
     "title" => "Doesn't exist",

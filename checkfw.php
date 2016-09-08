@@ -27,8 +27,6 @@ $to_do_homebrew = array(
   )
 );
 
-// TODO: maybe check for impossible versions (e.g. 4.7.0-33)
-
 function redir_bad_ver() {
   header("Location: fw.php?bad");
 }
