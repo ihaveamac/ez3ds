@@ -115,6 +115,7 @@ include_once("_header.php");
         <option value="31">31</option>
         <option value="32">32</option>
         <option value="33" selected="selected">33</option>
+        <option value="34">34</option>
         <?php } ?>
       </select>
       <select class="selectpicker show-menu-arrow" data-width="auto" name="region">
