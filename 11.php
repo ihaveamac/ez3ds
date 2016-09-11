@@ -12,10 +12,10 @@ include_once("_header.php");
     <li>The ARM11 kernel exploit "memchunkhax2.1" aka "svchax" has (basically) been patched. This means "legit CIAs" can't be installed on this version.</li>
     <li>Version checks were added for several system titles. This means versions of these titles lower than the hardcoded version can't be installed. This means an extra ARM9 exploit is required to bypass the checks with software. A list of titles can be found <a href="https://gist.github.com/ihaveamac/55045622b4d19abfd156e02166ad2f11" target="_blank">here</a>.</li>
   </ul>
-  <p>There are currently two public ways to bypass these protections, both use about the same exploit:</p>
+  <p>There are currently two public ways to bypass these protections, both use about the same exploit to <a href="https://github.com/Plailect/Guide/wiki/Firmware-Downgrade/" target="_blank">downgrade the firmware</a>:</p>
   <ul>
-    <li>"Hardmod" - a hardware modification that allows you to dump and restore the system NAND using a computer, which can be used to downgrade the firmware in the FIRM partitions.</li>
-    <li>DSiWare + System Transfer - uses an exploit in one of a few DSiWare games (Fieldrunners, Legends of Exidia, Guitar Rock Tour) to gain access to the entire NAND, and downgrade the firmware in the FIRM partitions.</li>
+    <li><a href="https://github.com/Plailect/Guide/wiki/Hardmod-Downgrade" target="_blank">"Hardmod"</a> - a hardware modification that allows you to dump and restore the system NAND using a computer, which can be used to downgrade the firmware in the FIRM partitions.</li>
+    <li><a href="https://github.com/Plailect/Guide/wiki/DSiWare-Downgrade" target="_blank">DSiWare + System Transfer</a> - uses an exploit in one of a few DSiWare games (Fieldrunners, Legends of Exidia, Guitar Rock Tour) to gain access to the entire NAND, and downgrade the firmware in the FIRM partitions.</li>
   </ul>
   <p>These methods would be unusable in the next update by Nintendo, when an important system title is updated to require the new kernel version in 11.0.</p>
   <p>There is work being put towards exploits on 11.0+, but this will take a while. Those who desperately want CFW as soon as possible can use the two above methods.</p>
