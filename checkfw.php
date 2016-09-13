@@ -150,7 +150,7 @@ if ($p_major == 8 && $p_minor == 1 && $p_nver == 0 && $p_model == "New" && $p_re
     if ($p_nver <= 31) {
       array_push($final_info, "browser");
     } elseif ($p_nver <= 33) {
-      array_push($final_info, "browser no exploit");
+      array_push($final_info, "browser blocked");
       $has_browser = false;
     } else {
       array_push($final_info, "browser no exploit");
