@@ -127,9 +127,9 @@ if ($p_major == 8 && $p_minor == 1 && $p_nver == 0 && $p_model == "New" && $p_re
 } else {
 
   // check if downgradable
-  if (($p_major == 11 && $p_minor == 0) || $p_major == 10 || ($p_major == 9 && $p_minor > 2)) {
+  if (($p_major == 11 && $p_minor <= 1) || $p_major == 10 || ($p_major == 9 && $p_minor > 2)) {
     array_push($final_info, "downgradable");
-  } elseif (($p_major == 11 && $p_minor > 0) || $p_major > 11) {
+  } elseif (($p_major == 11 && $p_minor > 1) || $p_major > 11) {
     array_push($final_info, "not downgradable");
     $downgradable = false;
   }
@@ -147,15 +147,18 @@ if ($p_major == 8 && $p_minor == 1 && $p_nver == 0 && $p_model == "New" && $p_re
       array_push($final_info, "browser");
     }
   } else {
-    if ($p_nver <= 33) {
+    if ($p_nver <= 31) {
       array_push($final_info, "browser");
+    } elseif ($p_nver <= 33) {
+      array_push($final_info, "browser no exploit");
+      $has_browser = false;
     } else {
       array_push($final_info, "browser no exploit");
       $has_browser = false;
     }
   }
 
-  if ($p_major == 11 && $p_minor == 0) {
+  if ($p_major == 11 && $p_minor <= 1) {
     array_push($final_info, "11");
     array_push($final_to_do, "fw downgrade");
   }
@@ -214,21 +217,21 @@ if ($p_major == 8 && $p_minor == 1 && $p_nver == 0 && $p_model == "New" && $p_re
     }
     array_push($final_exploits, "freakyhax", "oot3dhax", "(v*)hax", "humblehax", "basehaxx", "stickerhax", "steelhax");
     if ($p_region == "J") {
-      if (($p_major > 9 || ($p_major == 9 && $p_minor >= 2 ))) {
+      if (($p_major == 11 && $p_minor < 1) || $p_major == 10 || ($p_major == 9 && $p_minor >= 2 )) {
         array_push($final_exploits, "BASICSploit", "smilehax");
       }
-      if (($p_major > 9 || ($p_major == 9 && $p_minor >= 9 ))) {
+      if ($p_major > 9 || ($p_major == 9 && $p_minor >= 9 )) {
         array_push($final_exploits, "supermysterychunkhax");
       }
     } elseif ($p_region == "U") {
-      if (($p_major > 10 || ($p_major == 10 && $p_minor >= 1 ))) {
+      if (($p_major == 11 && $p_minor < 1) || $p_major == 10 || ($p_major == 10 && $p_minor >= 1 )) {
         array_push($final_exploits, "BASICSploit", "smilehax");
       }
-      if (($p_major > 9 || ($p_major == 9 && $p_minor >= 9 ))) {
+      if ($p_major > 9 || ($p_major == 9 && $p_minor >= 9 )) {
         array_push($final_exploits, "supermysterychunkhax");
       }
     } elseif ($p_region == "E") {
-      if (($p_major > 10 || ($p_major == 10 && $p_minor >= 2 ))) {
+      if ($p_major > 10 || ($p_major == 10 && $p_minor >= 2 )) {
         array_push($final_exploits, "supermysterychunkhax");
       }
     }

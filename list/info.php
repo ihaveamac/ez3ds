@@ -20,6 +20,11 @@ $info = array(
     "style" => "warning",
     "desc" => "This system does not have a browser with a public exploit. A game-based exploit is required.",
   ),
+  "browser blocked" => array(
+    "title" => "Browser blocked",
+    "style" => "warning",
+    "desc" => "This system has a blocked browser with no known workaround at this time. A game-based exploit is required.",
+  ),
   "new jpn 81" => array(
     "title" => "New 3DS JPN 8.1",
     "style" => "info",
@@ -31,9 +36,9 @@ $info = array(
     "desc" => "This system is already on 2.1.0-4, so arm9loaderhax can be installed right away, then updated to 9.2.0-20.",
   ),
   "11" => array(
-    "title" => "11.0.0",
-    "style" => "danger",
-    "desc" => "<p>This system is on 11.0.0, which currently can't be downgraded with software only. Only userland homebrew can be used.</p><p>To downgrade, a hardware mod, or DSiware + another 3DS system with custom firmware, is required to downgrade the firmware.</p>For more information, see <a href=\"11.php\" target=\"_blank\">\"I'm on 11.0, what can I do?\"</a>.",
+    "title" => "11.0.0 / 11.1.0",
+    "style" => "warning",
+    "desc" => "<p>This system is on 11.0.0 or 11.1.0, which currently can't be downgraded with software only. Only userland homebrew can be used.</p><p>To downgrade, a hardware mod, or DSiware + another 3DS system with custom firmware, is required to downgrade the firmware.</p>For more information, see <a href=\"11.php\" target=\"_blank\">\"I'm on 11.x, what can I do?\"</a>.",
   ),
   "downgradable" => array(
     "title" => "Downgradable",

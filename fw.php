@@ -33,7 +33,7 @@ include_once("_header.php");
   <form class="firmware center" action="checkfw.php" method="get">
     <input type="hidden" value="<?=$model?>" name="model">
     <p>
-      <!-- default selected firmware is 11.0.0-33U -->
+      <!-- default selected firmware is 11.1.0-34U -->
       <select class="selectpicker show-menu-arrow" data-width="auto" name="major">
         <?php if ($_GET["lv"] <= 1) { ?>
         <option value="1">1</option>
@@ -54,8 +54,8 @@ include_once("_header.php");
       </select>
       .
       <select class="selectpicker show-menu-arrow" data-width="auto" name="minor">
-        <option value="0" selected="selected">0</option>
-        <option value="1">1</option>
+        <option value="0">0</option>
+        <option value="1" selected="selected">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
         <option value="4">4</option>
@@ -109,8 +109,8 @@ include_once("_header.php");
         <option value="30">30</option>
         <option value="31">31</option>
         <option value="32">32</option>
-        <option value="33" selected="selected">33</option>
-        <option value="34">34</option>
+        <option value="33">33</option>
+        <option value="34" selected="selected">34</option>
         <?php } ?>
       </select>
       <select class="selectpicker show-menu-arrow" data-width="auto" name="region">
