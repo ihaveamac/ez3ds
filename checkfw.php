@@ -125,6 +125,9 @@ if ($p_major == 8 && $p_minor == 1 && $p_nver == 0 && $p_model == "New" && $p_re
   array_push($final_info, "start on 21");
   array_push($final_to_do, "start on 21 install");
 } else {
+  if ($p_major == 11 && $p_minor == 1) {
+    array_push($final_info, "hax needs update");
+  }
 
   // check if downgradable
   if (($p_major == 11 && $p_minor <= 1) || $p_major == 10 || ($p_major == 9 && $p_minor > 2)) {

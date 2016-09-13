@@ -25,6 +25,11 @@ $info = array(
     "style" => "warning",
     "desc" => "This system has a blocked browser with no known workaround at this time. A game-based exploit is required.",
   ),
+  "hax needs update" => array(
+    "title" => "*hax needs updating",
+    "style" => "danger",
+    "desc" => "This is a recently released version. Homebrew does not work on it yet.",
+  ),
   "new jpn 81" => array(
     "title" => "New 3DS JPN 8.1",
     "style" => "info",
