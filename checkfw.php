@@ -373,7 +373,7 @@ $exploit_diff_popover = "<p><b>Primary</b> exploits do not require extra exploit
 <b>Secondary</b> exploits can only be set up using a system with Homebrew access (including the same one), or extra hardware like Powersaves or a save device.";
 
 if (!empty($final_exploits)) {
-  echo '<hr><h2>List of usable exploits <a role="button" tabindex="0" class="btn btn-default" data-toggle="popover" data-trigger="focus" title="things" data-content="'.$exploit_diff_popover.'">Difference</a></h2>';
+  echo '<hr><h2>List of usable exploits <a role="button" tabindex="0" class="btn btn-default" data-toggle="popover" data-trigger="focus" title="Exploit types" data-content="'.$exploit_diff_popover.'">Difference</a></h2>';
   echo '<h3>Primary</h3>';
   echo '<div class="hax-list row container"><ul class="list-unstyled">';
   foreach ($final_exploits as $value) {
@@ -389,6 +389,7 @@ if (!empty($final_exploits)) {
       print_exploit_info($value, $hax_exploits[$value]);
     }
   }
+  echo '</div>';
 }
 echo '</div>';
 include_once("_footer.php");

@@ -6,6 +6,7 @@ include_once("_header.php");
   <h1 class="page-header">I'm on 11.x, what can I do?</h1>
   <p>Since several people are on 11.x and don't know what they can do, this page explains the possible actions for a system on <b>stock</b> 11.x. This does not apply to systems with CFW already.</p>
 
+  <hr>
   <h2>Custom Firmware</h2>
   <p>Right now, CFW is hard to obtain on 11.x, due to two reasons:</p>
   <ul>
@@ -20,6 +21,7 @@ include_once("_header.php");
   <p>These methods would be unusable in the next update by Nintendo, when an important system title is updated to require the new kernel version in 11.x.</p>
   <p>There is work being put towards exploits on 11.x+, but this will take a while. Those who desperately want CFW as soon as possible can use the two above methods.</p>
 
+  <hr>
   <h2>Homebrew</h2>
   <p>The two games "Cubic Ninja" and "The Legend of Zelda: Ocarina of Time 3D" have now been given <a href="https://en.wikipedia.org/wiki/Address_space_layout_randomization" target="_blank">ASLR</a> to combat the exploits for them. This makes the exploits nearly impossible to trigger due to the game's code being placed randomly in memory.</p>
   <p>Additionally, Cubic Ninja no longer has network access, breaking payload downloading.</p>
