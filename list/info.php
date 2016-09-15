@@ -31,7 +31,7 @@ $info = array(
     "desc" => "This is a recently released version. Homebrew does not work on it yet.",
   ),
   "new jpn 81" => array(
-    "title" => "New 3DS JPN 8.1",
+    "title" => "New 3DS 8.1.0-0J",
     "style" => "info",
     "desc" => "This appears to be a New 3DS system with 8.1.0-0J. This system needs to be updated to 9.2.0 first. (The final result will be 9.1.0-20J, this is perfectly normal.)",
   ),

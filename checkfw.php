@@ -125,9 +125,9 @@ if ($p_major == 8 && $p_minor == 1 && $p_nver == 0 && $p_model == "New" && $p_re
   array_push($final_info, "start on 21");
   array_push($final_to_do, "start on 21 install");
 } else {
-  if ($p_major == 11 && $p_minor == 1) {
+  /*if ($p_major == 11 && $p_minor == 1) {
     array_push($final_info, "hax needs update");
-  }
+  }*/
 
   // check if downgradable
   if (($p_major == 11 && $p_minor <= 1) || $p_major == 10 || ($p_major == 9 && $p_minor > 2)) {
@@ -280,9 +280,8 @@ include_once("_header.php");
   <h1 class="page-header">Results for <?=$p_model?> 3DS <?=$p_major.".".$p_minor.".".$p_revision."-".$p_nver.$p_region?></h1>
 <?php
 
-echo "<h2>Information</h2>";//<ul>";
+echo "<h2>Information</h2>";
 foreach ($final_info as $value) {
-  //echo "<li>".$info[$value]."</li>";
   ?>
   <div class="panel panel-<?=$info[$value]["style"]?>">
     <div class="panel-heading">
@@ -328,21 +327,23 @@ echo "</ol>";
 function print_exploit_info($key, $value) {
 ?>
 <li>
-  <div class="well well-sm title-well">
-    <div class="media">
-      <div class="media-left">
-        <img class="media-object title-icon pixelated" src="<?=$value["icon"]?>" alt="<?=$key?>">
-      </div>
-      <div class="media-body">
-        <h4 class="media-heading"><?=$key?></h4>
-        <?=$value["title"]?>
-        <?php if ($value["other"] != "") { ?><br>
-        <span class="title-other"><?=$value["other"]?></span>
-        <?php } if (!empty($value["url"])) { ?>
-        <div class="title-site-btn">
-          <a class="btn btn-primary" href="<?=$value["url"]?>" role="button" target="_blank">Go to site <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <div class="media">
+        <div class="media-left">
+          <img class="media-object title-icon pixelated" src="<?=$value["icon"]?>" alt="<?=$key?>">
         </div>
-        <?php } ?>
+        <div class="media-body">
+          <h4 class="media-heading"><?=$key?></h4>
+          <?=$value["title"]?>
+          <?php if ($value["other"] != "") { ?><br>
+          <span class="title-other"><?=$value["other"]?></span>
+          <?php } if (!empty($value["url"])) { ?>
+          <div class="title-site-btn">
+            <a class="btn btn-primary" href="<?=$value["url"]?>" role="button" target="_blank">Go to site <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+          </div>
+          <?php } ?>
+        </div>
       </div>
     </div>
   </div>

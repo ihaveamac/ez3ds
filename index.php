@@ -26,7 +26,7 @@ include_once("_header.php");
   <div class="container">
     <h1>Nintendo 3DS hax helper</h1>
     <p>Start running homebrew games, tools, and emulators on your Nintendo 3DS system today!</p>
-    <p><a class="btn btn-custom btn-lg" href="model.php" role="button">Start hax</a></p>
+    <p><a class="btn btn-custom btn-lg" href="model.php" role="button">Start hax</a> <a class="btn btn-primary btn-lg" href="faq.php" role="button">FAQ</a></p>
   </div>
 </div>
 <div class="container">
