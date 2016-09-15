@@ -39,11 +39,19 @@ include_once("_header.php");
   <hr id="systransfer">
   <h3>Is System Transfer safe to use with a system that has Custom Firmware? <small><a href="#systransfer">#systransfer</a></small></h3>
   <p>System Transfer can be used safely if one or both systems have CFW. Illegitimate tickets (homebrew CIAs, dumped + converted game cards, etc.) are not moved in a transfer, but the titles and their saves are not deleted.</p>
-  <p>If you are moving to New 3DS from Old 3DS, you should use "PC-Based Transfer", as it's the fastest method. The other options wirelessly copy files, including ones outside the <code>Nintendo 3DS</code> folder, which might not be wanted (as CFW files and others might conflict with those on the target system's SD card). Note you cannot transfer from New 3DS to Old 3DS without calling Nintendo to reverse a transfer.</p>
+  <p>If you are moving to New 3DS from Old 3DS, you should use "PC-Based Transfer", as it's the fastest method and has the least hassle. The other options wirelessly copy files, including ones outside the <code>Nintendo 3DS</code> folder, which might not be wanted (as CFW files and others might conflict with those on the target system's SD card).</p>
+  <p>Note you cannot transfer from New 3DS to Old 3DS without calling Nintendo to reverse a transfer. Nintendo Network IDs can only be moved to another system with System Transfer or calling Nintendo.</p>
 
   <hr id="banrisk">
   <h3>Will Nintendo "ban" me for using Homebrew or Custom Firmware? <small><a href="#banrisk">#banrisk</a></small></h3>
   <p>It is against the <abbr title="System Settings &rarr; Internet Settings &rarr; Other Information &rarr; User Agreement">user agreement</abbr> to use unauthorized software or modifications on the 3DS; doing so risks a ban from Nintendo's online services. That being said, Nintendo has never banned any user from its online services on any system purely for using homebrew or CFW. The chances of this happening randomly are very slim.</p>
-  <p>There are two known exceptions to this. First is cheating online, either through save edits or "cheat codes". Nintendo does ban users (temporarily or permanently) for players that have an unfair advantage online through the use of cheats. Second is the use of "public headers" on certain 3DS flash carts.</p>
+  <p>There are two known exceptions to this. First is cheating online, either through save edits or "cheat codes". Nintendo does ban users (temporarily or permanently) for players that have an unfair advantage online through the use of cheats. Second is the use of "public headers" when playing games online on certain 3DS flash carts.</p>
+
+  <hr id="wifitransfer">
+  <h3>How can I move files on my 3DS SD card wirelessly, without putting it into my computer? <small><a href="#wifitransfer">#wifitransfer</a></small></h3>
+  <p>There are two methods:</p>
+  <ul>
+    <li><b><a href="https://github.com/mtheall/ftpd" target="_blank">ftpd</a></b> - use <abbr title="File Transfer Protocol">FTP</abbr> to move files to and from the SD card. Supports several different clients on different operating systems.</li>
+    <li><b><a href="http://en-americas-support.nintendo.com/app/answers/detail/a_id/14218/~/how-to-use-microsd-management-to-move-files-between-a-new-nintendo-3ds-xl-and-a" target="_blank">microSD Management</a></b> - use File Explorer/Windows Explorer to move files to and from the SD card. Supports Windows 7 and later. New 3DS only.</b></li>
 </div>
 <?php include_once("_footer.php"); ?>
