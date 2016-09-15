@@ -275,6 +275,23 @@ include_once("_header.php");
     </div>
   </div>
 </div>
+<!-- primary and secondary -->
+<div class="modal fade" id="exploittypes" tabindex="-1" role="dialog" aria-labelledby="exploittypes">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="modaltitle">Primary and Secondary exploits</h4>
+      </div>
+      <div class="modal-body">
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="container">
   <h1 class="page-header">Results for <?=$p_model?> 3DS <?=$p_major.".".$p_minor.".".$p_revision."-".$p_nver.$p_region?></h1>
@@ -293,7 +310,7 @@ foreach ($final_info as $value) {
   </div>
 <?php }
 
-echo "<h2>What to do</h2>";
+echo "<hr><h2>What to do</h2>";
 if ($downgradable) {
   echo "<h3>Custom Firmware (recommended)</h3>";
   echo "<ol>";
@@ -351,8 +368,12 @@ function print_exploit_info($key, $value) {
 <?php
 }
 
+// separating so it can be easily edited
+$exploit_diff_popover = "<p><b>Primary</b> exploits do not require extra exploits or hardware to use. The only two things needed are the system and the game.</p>
+<b>Secondary</b> exploits can only be set up using a system with Homebrew access (including the same one), or extra hardware like Powersaves or a save device.";
+
 if (!empty($final_exploits)) {
-  echo '<h2>List of usable exploits</h2>';
+  echo '<hr><h2>List of usable exploits <a role="button" tabindex="0" class="btn btn-default" data-toggle="popover" data-trigger="focus" title="things" data-content="'.$exploit_diff_popover.'">Difference</a></h2>';
   echo '<h3>Primary</h3>';
   echo '<div class="hax-list row container"><ul class="list-unstyled">';
   foreach ($final_exploits as $value) {
