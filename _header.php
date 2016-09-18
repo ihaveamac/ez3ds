@@ -39,6 +39,18 @@
       height: 1px;
     }
 
+    div.firmware {
+      height: 200px;
+    }
+    form.firmware {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      z-index: 1;
+    }
+
     #mset-img img {
       width: 100%;
     }

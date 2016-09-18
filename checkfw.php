@@ -20,7 +20,7 @@ $to_do_homebrew = array(
     "link-desc" => "Nintendo 3DS web-browser exploits"
   ),
   "enter hbl no browser" => array(
-    "desc" => "Use one of the exploits to use the Homebrew Launcher."
+    "desc" => "Use one of the exploits below to use the Homebrew Launcher."
   ),
   "install secondary" => array(
     "desc" => "<i>Recommended</i> - Install a secondary entrypoint. This is especially important if using browserhax, due to the version check and general instability. Note the date-time bypass (setting the date back to get around the version check) has been fixed since 10.7.0-32."
@@ -163,14 +163,16 @@ if ($p_major == 8 && $p_minor == 1 && $p_nver == 0 && $p_model == "New" && $p_re
 
   if ($p_major == 11 && $p_minor <= 1) {
     array_push($final_info, "11");
-    array_push($final_to_do, "fw downgrade");
+    array_push($final_to_do, "fw downgrade 11".$p_minor);
   }
 
   if (($p_major > 9 || ($p_major == 9 && $p_minor > 2 ))) {
     if ($has_browser) {
-      array_push($final_to_do, "hbl browser downgrade");
+      array_push($final_to_do, "hbl browser");
+      array_push($final_to_do, "92 downgrade");
     } else {
-      array_push($final_to_do, "hbl no browser downgrade");
+      array_push($final_to_do, "hbl no browser");
+      array_push($final_to_do, "92 downgrade");
     }
   } else {
     if ($p_major == 9) {
@@ -197,7 +199,8 @@ if ($p_major == 8 && $p_minor == 1 && $p_nver == 0 && $p_model == "New" && $p_re
           array_push($final_to_do, "d9 no browser");
         } else {
           array_push($final_to_do, "90 to 107 update");
-          array_push($final_to_do, "hbl no browser downgrade");
+          array_push($final_to_do, "hbl no browser");
+          array_push($final_to_do, "92 downgrade");
         }
       }
     }

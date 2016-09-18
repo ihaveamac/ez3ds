@@ -20,8 +20,13 @@ $to_do = array(
     "link" => "https://github.com/Plailect/Guide/wiki/Cart-Update",
     "link-desc" => "Cart Update"
   ),
-  "fw downgrade" => array(
-    "desc" => "Downgrade firmware from 11.0.0 to 10.4.0. This won't change the version shown in System Settings, but will enable downgrading further to 9.2.0.",
+  "fw downgrade 110" => array(
+    "desc" => "Downgrade firmware from 11.0.0 to 10.4.0, using <b>dgTool 1.0</b>. This won't change the version shown in System Settings, but will enable downgrading further to 9.2.0.",
+    "link" => "https://github.com/Plailect/Guide/wiki/Firmware-Downgrade",
+    "link-desc" => "Firmware Downgrade"
+  ),
+  "fw downgrade 111" => array(
+    "desc" => "Downgrade firmware from 11.1.0 to 10.4.0, using <b>dgTool 1.1</b>. This won't change the version shown in System Settings, but will enable downgrading further to 9.2.0.",
     "link" => "https://github.com/Plailect/Guide/wiki/Firmware-Downgrade",
     "link-desc" => "Firmware Downgrade"
   ),
@@ -41,19 +46,14 @@ $to_do = array(
     "link-desc" => "Homebrew Launcher (Browser)"
   ),
   "hbl no browser" => array(
-    "desc" => "Use one of the exploits to use the Homebrew Launcher.",
+    "desc" => "Use one of the exploits below to use the Homebrew Launcher.",
     "link" => "https://github.com/Plailect/Guide/wiki/Homebrew-Launcher-(No-Browser)",
     "link-desc" => "Homebrew Launcher (No Browser)"
   ),
-  "hbl browser downgrade" => array(
-    "desc" => "Use the Internet Browser (or other exploit) to use the Homebrew Launcher, and downgrade to 9.2.0.",
-    "link" => "https://github.com/Plailect/Guide/wiki/Homebrew-Launcher-(Browser)",
-    "link-desc" => "Homebrew Launcher (Browser)"
-  ),
-  "hbl no browser downgrade" => array(
-    "desc" => "Use one of the exploits to use the Homebrew Launcher, and downgrade to 9.2.0.",
-    "link" => "https://github.com/Plailect/Guide/wiki/Homebrew-Launcher-(No-Browser)",
-    "link-desc" => "Homebrew Launcher (No Browser)"
+  "92 downgrade" => array(
+    "desc" => "Downgrade to 9.2.0.",
+    "link" => "https://github.com/Plailect/Guide/wiki/9.2.0_Downgrade",
+    "link-desc" => "9.2.0 Downgrade"
   ),
   "d9 browser" => array(
     "desc" => "Enter Decrypt9, using the Internet Browser.",

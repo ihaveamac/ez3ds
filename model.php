@@ -45,7 +45,7 @@ include_once("_header.php");
       </a>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-6 col-xl-6 console">
-      <a class="btn btn-default" href="fw.php?lv=4" role="button">
+      <a class="btn btn-default" href="fw.php?lv=5" role="button">
         <p><img class="console" src="img/new3dsxl.png"></p>
         New Nintendo 3DS XL
       </a>
