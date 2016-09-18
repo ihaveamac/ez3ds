@@ -123,7 +123,7 @@ if ($p_major == 8 && $p_minor == 1 && $p_nver == 0 && $p_model == "New" && $p_re
 // special check for 2.1.0-4
 } elseif ($p_major == 2 && $p_minor == 1 && $p_nver == 4) {
   array_push($final_info, "start on 21");
-  array_push($final_to_do, "start on 21 install");
+  array_push($final_to_do, "install a9lh");
 } else {
   /*if ($p_major == 11 && $p_minor == 1) {
     array_push($final_info, "hax needs update");

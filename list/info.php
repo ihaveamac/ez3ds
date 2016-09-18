@@ -38,7 +38,7 @@ $info = array(
   "start on 21" => array(
     "title" => "Start on 2.1.0-4",
     "style" => "success",
-    "desc" => "This system is already on 2.1.0-4, so arm9loaderhax can be installed right away, then updated to 9.2.0-20.",
+    "desc" => "This system is already on 2.1.0-4, so arm9loaderhax can be installed right away, then updated to the latest version.",
   ),
   "11" => array(
     "title" => "11.0.0 / 11.1.0",

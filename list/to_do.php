@@ -35,11 +35,6 @@ $to_do = array(
     "link" => "https://github.com/Plailect/Guide/wiki/NTR-and-Cubic-Ninja",
     "link-desc" => "NTR and Cubic Ninja"
   ),
-  "start on 21 install" => array(
-    "desc" => "Use the 9.2.0 ctrtransfer method.",
-    "link" => "https://github.com/Plailect/Guide/wiki/9.2.0-ctrtransfer",
-    "link-desc" => "9.2.0 ctrtransfer"
-  ),
   "hbl browser" => array(
     "desc" => "Use the Internet Browser (or other exploit) to use the Homebrew Launcher.",
     "link" => "https://github.com/Plailect/Guide/wiki/Homebrew-Launcher-(Browser)",
