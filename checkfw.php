@@ -218,10 +218,7 @@ if ($p_major == 8 && $p_minor == 1 && $p_nver == 0 && $p_model == "New" && $p_re
       }
       array_push($final_exploits, "menuhax");
     }
-    if ($p_major != 11) {
-      array_push($final_exploits, "ninjhax");
-    }
-    array_push($final_exploits, "freakyhax", "oot3dhax", "(v*)hax", "humblehax", "basehaxx", "stickerhax", "steelhax");
+    array_push($final_exploits, "ninjhax", "freakyhax", "oot3dhax", "(v*)hax", "humblehax", "basehaxx", "stickerhax", "steelhax");
     if ($p_region == "J") {
       if (($p_major == 11 && $p_minor < 1) || $p_major == 10 || ($p_major == 9 && $p_minor >= 2 )) {
         array_push($final_exploits, "BASICSploit", "smilehax");

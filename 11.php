@@ -26,6 +26,6 @@ include_once("_header.php");
   <p>The two games "Cubic Ninja" and "The Legend of Zelda: Ocarina of Time 3D" have now been given <a href="https://en.wikipedia.org/wiki/Address_space_layout_randomization" target="_blank">ASLR</a> to combat the exploits for them. This makes the exploits nearly impossible to trigger due to the game's code being placed randomly in memory.</p>
   <p>Additionally, Cubic Ninja no longer has network access, breaking payload downloading.</p>
   <p>Older SmileBASIC verisons no longer works on 11.1 due to a forced update.</p>
-  <p>oot3dhax has been fixed for 11.x, but the exploit can only be installed on a pre-11.x stock system, or with a save device like Powersaves. ninjhax has yet to be fully fixed.</p>
+  <p>ninjhax is fixed. oot3dhax has been fixed for 11.x, but the exploit can only be installed on a pre-11.x stock system, or with a save device like Powersaves.</p>
 </div>
 <?php include_once("_footer.php"); ?>
