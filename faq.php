@@ -53,5 +53,16 @@ include_once("_header.php");
   <ul>
     <li><b><a href="https://github.com/mtheall/ftpd" target="_blank">ftpd</a></b> - use <abbr title="File Transfer Protocol">FTP</abbr> to move files to and from the SD card. Supports several different clients on different operating systems.</li>
     <li><b><a href="http://en-americas-support.nintendo.com/app/answers/detail/a_id/14218/~/how-to-use-microsd-management-to-move-files-between-a-new-nintendo-3ds-xl-and-a" target="_blank">microSD Management</a></b> - use File Explorer/Windows Explorer to move files to and from the SD card. Supports Windows 7 and later. New 3DS only.</b></li>
+  </ul>
+
+  <hr id="sploiterror">
+  <h3>I'm getting an error when installing a secondary exploit. What does it mean? <small><a href="#sploiterror">#sploiterror</a></small></h3>
+  <ul>
+    <li><b>Error code C8804465</b>: Run the game at least once, then install again.</li>
+    <li><b>Error code C86044CD</b>: Delete save games and try again. Back up with a save manager.</li>
+    <li><b>Error code D8A0A046</b>: Make sure you have a working Internet connection, and Wireless is not disabled.</li>
+    <li><b>Red bottom screen</b>: Missing mmap xml. Read the <a href="https://github.com/ihaveamac/9.6-dbgen-xmls">9.6-dbgen-xmls README</a> for setup.</li>
+    <li><b>Yellow bottom screen</b>: Exploit can't be installed on this version. Only applies to stock firmware.</li>
+  </ul>
 </div>
 <?php include_once("_footer.php"); ?>
