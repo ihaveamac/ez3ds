@@ -218,7 +218,11 @@ if ($p_major == 8 && $p_minor == 1 && $p_nver == 0 && $p_model == "New" && $p_re
       }
       array_push($final_exploits, "menuhax");
     }
-    array_push($final_exploits, "ninjhax", "freakyhax", "oot3dhax", "(v*)hax", "humblehax", "basehaxx", "stickerhax", "steelhax");
+    array_push($final_exploits, "ninjhax", "freakyhax", "oot3dhax", "stickerhax", "steelhax");
+    // temporary until they are fixed
+    if (!($p_major == 11 && $p_minor >= 1)) {
+      array_push($final_exploits, "(v*)hax", "humblehax", "basehaxx");
+    }
     if ($p_region == "J") {
       if (($p_major == 11 && $p_minor < 1) || $p_major == 10 || ($p_major == 9 && $p_minor >= 2 )) {
         array_push($final_exploits, "BASICSploit", "smilehax");
@@ -297,7 +301,8 @@ include_once("_header.php");
   <h1 class="page-header">Results for <?=$p_model?> 3DS <?=$p_major.".".$p_minor.".".$p_revision."-".$p_nver.$p_region?></h1>
 <?php
 
-echo "<h2>Information</h2>";
+echo '<hr id="info">';
+echo '<h2>Information <small><a href="#info">#info</a></small></h2>';
 foreach ($final_info as $value) {
   ?>
   <div class="panel panel-<?=$info[$value]["style"]?>">
@@ -310,9 +315,11 @@ foreach ($final_info as $value) {
   </div>
 <?php }
 
-echo "<hr><h2>What to do</h2>";
+echo '<hr id="todo">';
+echo '<h2>What to do <small><a href="#todo">#todo</a></small></h2>';
 if ($downgradable) {
-  echo "<h3>Custom Firmware (recommended)</h3>";
+  echo '<div id="cfw">';
+  echo '<h3>Custom Firmware (recommended) <small><a href="#cfw">#cfw</a></small> </h3>';
   echo "<ol>";
   foreach ($final_to_do as $value) {
     echo '<li><p>'.$to_do[$value]["desc"].'</p>';
@@ -327,7 +334,9 @@ if ($downgradable) {
   echo "</ol>";
 }
 if (!empty($final_to_do_homebrew)) {
-  echo "<h3>Homebrew</h3><ol>";
+  echo '<div id="homebrew">';
+  echo '<h3>Homebrew <small><a href="#homebrew">#homebrew</a></small> </h3>';
+  echo "<ol>";
   foreach ($final_to_do_homebrew as $value) {
     echo '<li><p>'.$to_do_homebrew[$value]["desc"].'</p>';
     if (!empty($to_do_homebrew[$value]["image"])) {
@@ -344,7 +353,7 @@ echo "</ol>";
 function print_exploit_info($key, $value) {
 ?>
 <li>
-  <div class="panel panel-default">
+  <div class="panel <?=($key == "browserhax")?"panel-primary":"panel-default"?>">
     <div class="panel-body">
       <div class="media">
         <div class="media-left">
@@ -373,8 +382,10 @@ $exploit_diff_popover = "<p><b>Primary</b> exploits do not require extra exploit
 <b>Secondary</b> exploits can only be set up using a system with Homebrew access (including the same one), or extra hardware like Powersaves or a save device.";
 
 if (!empty($final_exploits)) {
-  echo '<hr><h2>List of usable exploits <a role="button" tabindex="0" class="btn btn-default" data-toggle="popover" data-trigger="focus" title="Exploit types" data-content="'.$exploit_diff_popover.'">Difference</a></h2>';
-  echo '<h3>Primary</h3>';
+  echo '<hr id="exploitlist">';
+  echo '<h2>List of usable exploits <a role="button" tabindex="0" class="btn btn-default" data-toggle="popover" data-trigger="focus" title="Exploit types" data-content="'.$exploit_diff_popover.'">Difference</a> <small><a href="#exploitlist">#exploitlist</a></small></h2>';
+  echo '<div id="primary">';
+  echo '<h3>Primary <small><a href="#primary">#primary</a></small> </h3>';
   echo '<div class="hax-list row container"><ul class="list-unstyled">';
   foreach ($final_exploits as $value) {
     if ($hax_exploits[$value]["primary"]) {
@@ -382,7 +393,8 @@ if (!empty($final_exploits)) {
     }
   }
   echo '</div>';
-  echo "<h3>Secondary</h3>";
+  echo '<div id="secondary">';
+  echo '<h3>Secondary <small><a href="#secondary">#secondary</a></small> </h3>';
   echo '<div class="hax-list row container"><ul class="list-unstyled">';
   foreach ($final_exploits as $value) {
     if (!$hax_exploits[$value]["primary"]) {
