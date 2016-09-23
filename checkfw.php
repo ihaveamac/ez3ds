@@ -2,7 +2,6 @@
 require_once("list/hax_exploits.php");
 require_once("list/info.php");
 require_once("list/to_do.php");
-// require_once("list/to_do_homebrew.php");
 
 $to_do_homebrew = array(
   "starter pack" => array(
@@ -46,7 +45,7 @@ if (($p_model != "New" && $p_model != "Old") ||
     ($p_revision != 0) ||
     ($p_nver < 0 || $p_nver > 34) ||
     ($p_region != "U" && $p_region != "E" && $p_region != "J")) {
-  header("Location: model.php?bad");
+  header("Location: model?bad");
   die; // no u
 }
 
@@ -111,7 +110,7 @@ if (($p_major == 1 && $p_minor == 0 && $p_nver > 0) ||   // 1.0.0-0
     ($p_major == 11 && $p_minor == 0 && $p_nver > 33) || // 11.0.0-33
     ($p_major == 11 && $p_minor == 1 && $p_nver > 34) || // 11.1.0-34
     ($p_major == 11 && $p_minor > 1)) {
-  header("Location: model.php?bad");
+  header("Location: model?bad");
   die; // no u
 }
 
