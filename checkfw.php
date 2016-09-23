@@ -300,7 +300,7 @@ include_once("_header.php");
   <h1 class="page-header">Results for <?=$p_model?> 3DS <?=$p_major.".".$p_minor.".".$p_revision."-".$p_nver.$p_region?></h1>
 <?php
 
-echo '<div id="info">';
+echo '<div id="info"></div>';
 echo '<h2>Information <small><a href="#info">#info</a></small></h2>';
 foreach ($final_info as $value) {
   ?>
@@ -317,7 +317,7 @@ foreach ($final_info as $value) {
 echo '<hr id="todo">';
 echo '<h2>What to do <small><a href="#todo">#todo</a></small></h2>';
 if ($downgradable) {
-  echo '<div id="cfw">';
+  echo '<div id="cfw"></div>';
   echo '<h3>Custom Firmware (recommended) <small><a href="#cfw">#cfw</a></small> </h3>';
   echo "<ol>";
   foreach ($final_to_do as $value) {
@@ -333,7 +333,7 @@ if ($downgradable) {
   echo "</ol>";
 }
 if (!empty($final_to_do_homebrew)) {
-  echo '<div id="homebrew">';
+  echo '<div id="homebrew"></div>';
   echo '<h3>Homebrew <small><a href="#homebrew">#homebrew</a></small> </h3>';
   echo "<ol>";
   foreach ($final_to_do_homebrew as $value) {
@@ -383,7 +383,7 @@ $exploit_diff_popover = "<p><b>Primary</b> exploits do not require extra exploit
 if (!empty($final_exploits)) {
   echo '<hr id="exploitlist">';
   echo '<h2>List of usable exploits <a role="button" tabindex="0" class="btn btn-default" data-toggle="popover" data-trigger="focus" title="Exploit types" data-content="'.$exploit_diff_popover.'">Difference</a> <small><a href="#exploitlist">#exploitlist</a></small></h2>';
-  echo '<div id="primary">';
+  echo '<div id="primary"></div>';
   echo '<h3>Primary <small><a href="#primary">#primary</a></small> </h3>';
   echo '<div class="hax-list row container"><ul class="list-unstyled">';
   foreach ($final_exploits as $value) {
@@ -392,7 +392,7 @@ if (!empty($final_exploits)) {
     }
   }
   echo '</div>';
-  echo '<div id="secondary">';
+  echo '<div id="secondary"></div>';
   echo '<h3>Secondary <small><a href="#secondary">#secondary</a></small> </h3>';
   echo '<div class="hax-list row container"><ul class="list-unstyled">';
   foreach ($final_exploits as $value) {
