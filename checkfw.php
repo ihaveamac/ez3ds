@@ -301,7 +301,7 @@ include_once("_header.php");
   <h1 class="page-header">Results for <?=$p_model?> 3DS <?=$p_major.".".$p_minor.".".$p_revision."-".$p_nver.$p_region?></h1>
 <?php
 
-echo '<hr id="info">';
+echo '<div id="info">';
 echo '<h2>Information <small><a href="#info">#info</a></small></h2>';
 foreach ($final_info as $value) {
   ?>
