@@ -1,5 +1,5 @@
 <?php
-$title = "ez3ds - Nintendo 3DS hax helper for noobs";
+$title = "%index%";
 include_once("_header.php");
 ?>
 <!-- Modal -->
