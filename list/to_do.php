@@ -47,7 +47,7 @@ $to_do = array(
   ),
   "92 downgrade" => array(
     "desc" => "Downgrade to 9.2.0.",
-    "link" => "https://github.com/Plailect/Guide/wiki/9.2.0_Downgrade",
+    "link" => "https://github.com/Plailect/Guide/wiki/9.2.0-Downgrade",
     "link-desc" => "9.2.0 Downgrade"
   ),
   "d9 browser" => array(
