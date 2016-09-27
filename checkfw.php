@@ -138,9 +138,12 @@ if ($p_major == 8 && $p_minor == 1 && $p_nver == 0 && $p_model == "New" && $p_re
 
   // check if an actual *exploitable* browser is installed
   $has_browser = true;
-  if ($p_nver < 26) { // at this point game card updates won't install dummy browser
-    if (($p_major == 9 && $p_minor == 9) || ($p_major > 9)) { // check for 9.9 and nver below 26
-      array_push($final_info, "dummy browser");
+  if ($p_nver < 32) { // at this point game card updates won't install dummy browser (yet)
+    if ((($p_major == 10 && $p_minor == 7) || ($p_major > 10)) && $p_nver < 32) { // check for 9.9 and nver below 26
+      array_push($final_info, "dummy browser 10.7");
+      $has_browser = false;
+    } elseif ((($p_major == 9 && $p_minor == 9) || ($p_major > 9)) && $p_nver < 26) { // check for 9.9 and nver below 26
+      array_push($final_info, "dummy browser 9.9");
       $has_browser = false;
     } elseif ($p_nver < 2) {
       array_push($final_info, "no browser");

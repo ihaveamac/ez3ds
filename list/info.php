@@ -1,9 +1,14 @@
 <?php
 $info = array(
-  "dummy browser" => array(
+  "dummy browser 9.9" => array(
     "title" => "Dummy browser installed",
     "style" => "warning",
     "desc" => "This system was on 9.8.0-25 or lower, and updated with a game card containing 9.9.0 or higher, therefore a dummy browser was installed, replacing any previous ones. A game-based exploit is required.",
+  ),
+  "dummy browser 10.7" => array(
+    "title" => "Dummy browser installed",
+    "style" => "warning",
+    "desc" => "This system was on 10.6.0-31 or lower, and updated with a game card containing 10.7.0 or higher, therefore a dummy browser was installed, replacing any previous ones. A game-based exploit is required.",
   ),
   "no browser" => array(
     "title" => "No browser installed",
