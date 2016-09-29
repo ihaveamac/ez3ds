@@ -220,10 +220,10 @@ if ($p_major == 8 && $p_minor == 1 && $p_nver == 0 && $p_model == "New" && $p_re
       }
       array_push($final_exploits, "menuhax");
     }
-    array_push($final_exploits, "ninjhax", "freakyhax", "oot3dhax", "stickerhax", "steelhax");
+    array_push($final_exploits, "ninjhax", "freakyhax", "oot3dhax", "stickerhax", "steelhax", "basehaxx");
     // temporary until they are fixed
     if (!($p_major == 11 && $p_minor >= 1)) {
-      array_push($final_exploits, "(v*)hax", "humblehax", "basehaxx");
+      array_push($final_exploits, "(v*)hax", "humblehax");
     }
     if ($p_region == "J") {
       if (($p_major == 11 && $p_minor < 1) || $p_major == 10 || ($p_major == 9 && $p_minor >= 2 )) {
