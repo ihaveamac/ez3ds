@@ -23,6 +23,11 @@ $to_do_homebrew = array(
   ),
   "install secondary" => array(
     "desc" => "<i>Recommended</i> - Install a secondary entrypoint. This is especially important if using browserhax, due to the version check and general instability. Note the date-time bypass (setting the date back to get around the version check) has been fixed since 10.7.0-32."
+  ),
+  "follow up homebrew" => array(
+    "desc" => "Check out the Follow up guide on what to do next.",
+    "link" => "followup_homebrew",
+    "link-desc" => "Follow up: Homebrew"
   )
 );
 
@@ -207,7 +212,10 @@ if ($p_major == 8 && $p_minor == 1 && $p_nver == 0 && $p_model == "New" && $p_re
       }
     }
   }
-  array_push($final_to_do, "ctrtransfer", "install a9lh");
+  if ($p_model == "Old") {
+    array_push($final_to_do, "ctrtransfer");
+  }
+  array_push($final_to_do, "install a9lh");
 
   // SmileBASIC USA lowest: 10.1.0-27U
   // SmileBASIC JPN lowest: 9.2.0-20J?
@@ -256,7 +264,7 @@ if ($p_major == 8 && $p_minor == 1 && $p_nver == 0 && $p_model == "New" && $p_re
     } else {
       array_push($final_to_do_homebrew, "enter hbl no browser");
     }
-    array_push($final_to_do_homebrew, "install secondary");
+    array_push($final_to_do_homebrew, "install secondary", "follow up homebrew");
   }
 }
 
@@ -322,7 +330,7 @@ echo '<h2>What to do <small><a href="#todo">#todo</a></small></h2>';
 if ($downgradable) {
   echo '<div id="cfw"></div>';
   echo '<h3>Custom Firmware (recommended) <small><a href="#cfw">#cfw</a></small> </h3>';
-  echo "<ol>";
+  echo '<ol class="list-margin">';
   foreach ($final_to_do as $value) {
     echo '<li><p>'.$to_do[$value]["desc"].'</p>';
     if (!empty($to_do[$value]["image"])) {
@@ -338,7 +346,7 @@ if ($downgradable) {
 if (!empty($final_to_do_homebrew)) {
   echo '<div id="homebrew"></div>';
   echo '<h3>Homebrew <small><a href="#homebrew">#homebrew</a></small> </h3>';
-  echo "<ol>";
+  echo '<ol class="list-margin">';
   foreach ($final_to_do_homebrew as $value) {
     echo '<li><p>'.$to_do_homebrew[$value]["desc"].'</p>';
     if (!empty($to_do_homebrew[$value]["image"])) {

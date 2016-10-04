@@ -48,7 +48,7 @@ $info = array(
   "11" => array(
     "title" => "11.0.0 / 11.1.0",
     "style" => "warning",
-    "desc" => "<p>This system is on 11.0.0 or 11.1.0, which currently can't be downgraded with software only. Only userland homebrew can be used.</p><p>To downgrade, a hardware mod, or DSiware + another 3DS system with custom firmware, is required to downgrade the firmware.</p>For more information, see <a href=\"11.php\" target=\"_blank\">\"I'm on 11.x, what can I do?\"</a>.",
+    "desc" => "<p>This system is on 11.0.0 or 11.1.0, which currently can't be downgraded with software only. Only userland homebrew can be used.</p><p>To downgrade, a hardware mod, or DSiware + another 3DS system with custom firmware, is required to downgrade the firmware.</p>For more information, see <a href=\"11\" target=\"_blank\">\"I'm on 11.x, what can I do?\"</a>.",
   ),
   "downgradable" => array(
     "title" => "Downgradable",

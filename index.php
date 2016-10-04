@@ -26,10 +26,24 @@ include_once("_header.php");
   <div class="container">
     <h1>Nintendo 3DS hax helper</h1>
     <p>Start running homebrew games, tools, and emulators on your Nintendo 3DS family system today!</p>
-    <p><a class="btn btn-custom btn-lg" href="model" role="button">Start hax</a> <a class="btn btn-primary btn-lg" href="faq" role="button">FAQ</a></p>
+    <p>
+      <div class="btn-group">
+        <a class="btn btn-custom btn-lg" href="model" role="button">Start hax</a>
+        <a class="btn btn-primary btn-lg" href="faq" role="button">FAQ</a>
+        <div class="btn-group">
+          <button type="button" class="btn btn-success btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Follow up <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="followup_homebrew">Homebrew</a></li>
+            <li class="disabled"><a href="followup_cfw">Custom Firmware (Coming soon!)</a></li>
+          </ul>
+        </div>
+      </div>
+    </p>
   </div>
 </div>
-<div class="container">
+<div class="container list-margin">
   <h2>What is Homebrew?</h2>
   <!-- template used from https://github.com/RedInquisitive/Screenshot-Tool/tree/master/templates -->
   <a href="#" data-toggle="modal" data-target="#hblpreview"><img id="hb-demo" class="pull-right" src="img/new3dsxl-hb.png"></a>

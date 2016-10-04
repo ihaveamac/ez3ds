@@ -62,12 +62,12 @@ $to_do = array(
   ),
   "ctrtransfer" => array(
     "desc" => "Use the 2.1.0 ctrtransfer method.",
-    "link" => "https://github.com/Plailect/Guide/wiki/Part-2-(2.1.0-ctrtransfer)",
-    "link-desc" => "Part 2 (2.1.0 ctrtransfer)"
+    "link" => "https://github.com/Plailect/Guide/wiki/Part-2-(2.1.0)",
+    "link-desc" => "Part 2 (2.1.0)"
   ),
   "install a9lh" => array(
     "desc" => "Install arm9loaderhax.",
-    "link" => "https://github.com/Plailect/Guide/wiki/Part-3-(arm9loaderhax)",
-    "link-desc" => "Part 3 (arm9loaderhax)"
+    "link" => "https://github.com/Plailect/Guide/wiki/Part-3-(A9LH)",
+    "link-desc" => "Part 3 (A9LH)"
   ),
 );

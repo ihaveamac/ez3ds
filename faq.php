@@ -2,7 +2,7 @@
 $title = "ez3ds - Frequently Asked Questions";
 include_once("_header.php");
 ?>
-<div class="container">
+<div class="container list-margin">
   <h1 class="page-header">Frequently Asked Questions</h1>
   <p>Be sure to also check out the <a href="https://www.reddit.com/r/3dshacks/wiki/faq" target="_blank">/r/3dshacks FAQ</a>!</p>
   <p>Got more questions to add? <a href="https://github.com/ihaveamac/ez3ds" target="_blank">Submit an issue or pull request at GitHub</a>!</p>
@@ -21,12 +21,13 @@ include_once("_header.php");
   </ul>
   <p>A few things you can do to make sure everything goes smoothly:</p>
   <ul>
-    <li>
+    <li><p>
       If you need to downgrade to 9.2.0-20: it is suggested that you format first, if you can. This is because there exists an unknown issue that causes soft-bricks <i>after</i> the downgrade, forcing you to update to the latest version with recovery mode. It's unknown what causes it, or how to tell if it will happen.<br>
-      For more information, see these two issues on GitHub: <a href="https://github.com/Plailect/sysDowngrader/issues/1" target="_blank">Plailect/sysDowngrader#1</a>, <a href="https://github.com/Plailect/PlaiSysUpdater/issues/8" target="_blank">Plailect/PlaiSysUpdater#8</a></li>
-    <li>Make sure you're using the <b>latest</b> version of every tool (<a href="https://github.com/Plailect/sysDowngrader" target="_blank">sysDowngrader</a>, <a href="https://github.com/d0k3/Decrypt9WIP" target="_blank">Decrypt9WIP</a>, <a href="https://github.com/AuroraWright/SafeA9LHInstaller" target="_blank">SafeA9LHInstaller</a>, <a href="https://github.com/d0k3/Hourglass9" target="_blank">Hourglass9</a>) before continuing. Several accidents and bricks happen to users using older versions without realizing!</li>
-    <li>Don't skip copying the files ending in <code>.sha</code>, they help in verifying the file they are named as (e.g. <code>NANDmin.bin</code> and <code>NANDmin.bin.sha</code>).</li>
-    <li>Keep your console plugged in and the battery charged, to prevent it from dying in the middle of a critical process.</li>
+      For more information, see these two issues on GitHub: <a href="https://github.com/Plailect/sysDowngrader/issues/1" target="_blank">Plailect/sysDowngrader#1</a>, <a href="https://github.com/Plailect/PlaiSysUpdater/issues/8" target="_blank">Plailect/PlaiSysUpdater#8</a>
+    </p></li>
+    <li><p>Make sure you're using the <b>latest</b> version of every tool (<a href="https://github.com/Plailect/sysDowngrader" target="_blank">sysDowngrader</a>, <a href="https://github.com/d0k3/Decrypt9WIP" target="_blank">Decrypt9WIP</a>, <a href="https://github.com/AuroraWright/SafeA9LHInstaller" target="_blank">SafeA9LHInstaller</a>, <a href="https://github.com/d0k3/Hourglass9" target="_blank">Hourglass9</a>) before continuing. Several accidents and bricks happen to users using older versions without realizing!</p></li>
+    <li><p>Don't skip copying the files ending in <code>.sha</code>, they help in verifying the file they are named as (e.g. <code>NANDmin.bin</code> and <code>NANDmin.bin.sha</code>).</p></li>
+    <li><p>Keep your console plugged in and the battery charged, to prevent it from dying in the middle of a critical process.</p></li>
   </ul>
 
   <hr id="eshop-games">

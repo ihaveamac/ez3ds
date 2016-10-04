@@ -19,6 +19,9 @@
     footer {
       margin: 0 0 25px 0;
     }
+    .list-margin li {
+      margin: 0 0 5px;
+    }
     .center {
       text-align: center;
     }
@@ -51,6 +54,11 @@
       z-index: 1;
     }
 
+    .hbmenu-list-item {
+      width: 100%;
+      max-width: 304px;
+      border-radius: 14px;
+    }
     #mset-img img {
       width: 100%;
     }
