@@ -24,7 +24,7 @@ include_once("_header.php");
 
 <div class="jumbotron">
   <div class="container">
-    <h1>Nintendo 3DS hax helper</h1>
+    <h1>Nintendo <span id="three">3</span>DS hax helper</h1>
     <p>Start running homebrew games, tools, and emulators on your Nintendo 3DS family system today!</p>
     <p>
       <div class="btn-group">

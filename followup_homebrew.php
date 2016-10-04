@@ -35,10 +35,10 @@ include_once("_header.php");
       </ul>
       <h4>Requirements</h4>
       <ul>
-        <li><a href="https://github.com/yellows8/ctr-httpwn/releases" target="_blank">ctr-httpwn latest release</a.</li>
-        <li>Homebrew exploit (excluding menuhax for 10.6, 10.7, or 11.0.</li>
-        <li><a href="https://smealum.github.io/ninjhax2/starter.zip">Homebrew Starter Kit</a> set up (<code>3ds</code> folder and <code>boot.3dsx</code> at root.</li>
-        <li><i>If below 10.0.0-27:</i> HANS (available in the Homebrew Starter Kit)</i.</li>
+        <li><a href="https://github.com/yellows8/ctr-httpwn/releases" target="_blank">ctr-httpwn latest release</a>.</li>
+        <li>Homebrew exploit (excluding menuhax for 10.6, 10.7, or 11.0)</li>
+        <li><a href="https://smealum.github.io/ninjhax2/starter.zip">Homebrew Starter Kit</a> set up (<code>3ds</code> folder and <code>boot.3dsx</code> at root)</li>
+        <li><i>If below 10.0.0-27:</i> HANS (available in the Homebrew Starter Kit).</li>
       </ul>
       <h4>Set up</h4>
       <ol>
@@ -87,8 +87,8 @@ include_once("_header.php");
       </ul>
       <h4>Requirements</h4>
       <ul>
-        <li>Homebrew exploit (excluding menuhax for 10.6, 10.7, or 11.0.</li>
-        <li><a href="https://smealum.github.io/ninjhax2/starter.zip">Homebrew Starter Kit</a> set up (<code>3ds</code> folder and <code>boot.3dsx</code> at root.</li>
+        <li>Homebrew exploit (excluding menuhax for 10.6, 10.7, or 11.0)</li>
+        <li><a href="https://smealum.github.io/ninjhax2/starter.zip">Homebrew Starter Kit</a> set up (<code>3ds</code> folder and <code>boot.3dsx</code> at root)</li>
       </ul>
       <h4>Usage (HANS)</h4>
       <ol>

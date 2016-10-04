@@ -114,6 +114,10 @@
       max-height: 160px;
     }
 
+    #three {
+      color: #CE181E;
+    }
+
     /* used from http://twitterbootstrap3buttons.w3masters.nl/?color=%23CE181E */
     .btn-custom {
       background-color: #CE181E;
