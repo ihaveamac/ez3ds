@@ -21,12 +21,17 @@ $to_do = array(
     "link-desc" => "Cart Update"
   ),
   "fw downgrade 110" => array(
-    "desc" => "Downgrade firmware from 11.0.0 to 10.4.0, using <b>dgTool 1.0</b>. This won't change the version shown in System Settings, but will enable downgrading further to 9.2.0.",
+    "desc" => "Downgrade firmware from 11.0.0 to 10.4.0. If using DSiWare Downgrade, use <b>dgTool 1.0</b>. This won't change the version shown in System Settings, but will enable downgrading further to 9.2.0.",
     "link" => "https://github.com/Plailect/Guide/wiki/Firmware-Downgrade",
     "link-desc" => "Firmware Downgrade"
   ),
   "fw downgrade 111" => array(
-    "desc" => "Downgrade firmware from 11.1.0 to 10.4.0, using <b>dgTool 1.1</b>. This won't change the version shown in System Settings, but will enable downgrading further to 9.2.0.",
+    "desc" => "Downgrade firmware from 11.1.0 to 10.4.0. If using DSiWare Downgrade, use <b>dgTool 1.1</b>. This won't change the version shown in System Settings, but will enable downgrading further to 9.2.0.",
+    "link" => "https://github.com/Plailect/Guide/wiki/Firmware-Downgrade",
+    "link-desc" => "Firmware Downgrade"
+  ),
+  "fw downgrade 112" => array(
+    "desc" => "Downgrade firmware from 11.2.0 to 10.4.0. If using DSiWare Downgrade, use <b>dgTool 1.2 (currently unavailable!)</b>. This won't change the version shown in System Settings, but will enable downgrading further to 9.2.0.",
     "link" => "https://github.com/Plailect/Guide/wiki/Firmware-Downgrade",
     "link-desc" => "Firmware Downgrade"
   ),

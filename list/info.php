@@ -33,7 +33,7 @@ $info = array(
   "hax needs update" => array(
     "title" => "*hax needs updating",
     "style" => "danger",
-    "desc" => "This is a recently released version. Homebrew does not work on it yet.",
+    "desc" => "This is a recently released update. Homebrew may or may not work on it yet.",
   ),
   "new jpn 81" => array(
     "title" => "New 3DS 8.1.0-0J",
@@ -46,9 +46,9 @@ $info = array(
     "desc" => "This system is already on 2.1.0-4, so arm9loaderhax can be installed right away, then updated to the latest version.",
   ),
   "11" => array(
-    "title" => "11.0.0 / 11.1.0",
+    "title" => "11.0.0 / 11.1.0 / 11.2.0",
     "style" => "warning",
-    "desc" => "<p>This system is on 11.0.0 or 11.1.0, which currently can't be downgraded with software only. Only userland homebrew can be used.</p><p>To downgrade, a hardware mod, or DSiware + another 3DS system with custom firmware, is required to downgrade the firmware.</p>For more information, see <a href=\"11\" target=\"_blank\">\"I'm on 11.x, what can I do?\"</a>.",
+    "desc" => "<p>This system is on 11.0.0, 11.1.0, or 11.2.0, which currently can't be downgraded with software only. Only userland homebrew can be used.</p><p>To downgrade, a hardware mod, or DSiWare + another 3DS system with custom firmware, is required to downgrade the firmware.</p>For more information, see <a href=\"11\" target=\"_blank\">\"I'm on 11.x, what can I do?\"</a>.",
   ),
   "downgradable" => array(
     "title" => "Downgradable",

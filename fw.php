@@ -82,8 +82,8 @@ $names = array("Nintendo 3DS", "Nintendo 3DS XL", "Nintendo 2DS", "New Nintendo 
           .
           <select class="selectpicker show-menu-arrow" data-width="auto" name="minor">
             <option value="0">0</option>
-            <option value="1" selected="selected">1</option>
-            <option value="2">2</option>
+            <option value="1">1</option>
+            <option value="2" selected="selected">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option>
@@ -137,7 +137,8 @@ $names = array("Nintendo 3DS", "Nintendo 3DS XL", "Nintendo 2DS", "New Nintendo 
             <option value="31">31</option>
             <option value="32">32</option>
             <option value="33">33</option>
-            <option value="34" selected="selected">34</option>
+            <option value="34">34</option>
+            <option value="35" selected="selected">35</option>
             <?php } ?>
           </select>
           <select class="selectpicker show-menu-arrow" data-width="auto" name="region">

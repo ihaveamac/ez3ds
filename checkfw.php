@@ -48,7 +48,7 @@ if (($p_model != "New" && $p_model != "Old") ||
     ($p_major < 1 || $p_major > 11) ||
     ($p_minor < 0 || $p_minor > 9) ||
     ($p_revision != 0) ||
-    ($p_nver < 0 || $p_nver > 34) ||
+    ($p_nver < 0 || $p_nver > 35) ||
     ($p_region != "U" && $p_region != "E" && $p_region != "J")) {
   header("Location: model?bad");
   die; // no u
@@ -114,7 +114,8 @@ if (($p_major == 1 && $p_minor == 0 && $p_nver > 0) ||   // 1.0.0-0
     ($p_major == 10 && $p_minor > 7) ||
     ($p_major == 11 && $p_minor == 0 && $p_nver > 33) || // 11.0.0-33
     ($p_major == 11 && $p_minor == 1 && $p_nver > 34) || // 11.1.0-34
-    ($p_major == 11 && $p_minor > 1)) {
+    ($p_major == 11 && $p_minor == 2 && $p_nver > 35) || // 11.2.0-35
+    ($p_major == 11 && $p_minor > 2)) {
   header("Location: model?bad");
   die; // no u
 }
@@ -129,14 +130,14 @@ if ($p_major == 8 && $p_minor == 1 && $p_nver == 0 && $p_model == "New" && $p_re
   array_push($final_info, "start on 21");
   array_push($final_to_do, "install a9lh");
 } else {
-  /*if ($p_major == 11 && $p_minor == 1) {
+  if ($p_major == 11 && $p_minor == 2) {
     array_push($final_info, "hax needs update");
-  }*/
+  }
 
   // check if downgradable
   if (($p_major == 11 && $p_minor <= 1) || $p_major == 10 || ($p_major == 9 && $p_minor > 2)) {
     array_push($final_info, "downgradable");
-  } elseif (($p_major == 11 && $p_minor > 1) || $p_major > 11) {
+  } elseif (($p_major == 11 && $p_minor > 2) || $p_major > 11) {
     array_push($final_info, "not downgradable");
     $downgradable = false;
   }
@@ -144,7 +145,7 @@ if ($p_major == 8 && $p_minor == 1 && $p_nver == 0 && $p_model == "New" && $p_re
   // check if an actual *exploitable* browser is installed
   $has_browser = true;
   if ($p_nver < 32) { // at this point game card updates won't install dummy browser (yet)
-    if ((($p_major == 10 && $p_minor == 7) || ($p_major > 10)) && $p_nver < 32) { // check for 9.9 and nver below 26
+    if ((($p_major == 10 && $p_minor == 7) || ($p_major > 10)) && $p_nver < 32) { // check for 10.7 and nver below 32
       array_push($final_info, "dummy browser 10.7");
       $has_browser = false;
     } elseif ((($p_major == 9 && $p_minor == 9) || ($p_major > 9)) && $p_nver < 26) { // check for 9.9 and nver below 26
@@ -168,7 +169,7 @@ if ($p_major == 8 && $p_minor == 1 && $p_nver == 0 && $p_model == "New" && $p_re
     }
   }
 
-  if ($p_major == 11 && $p_minor <= 1) {
+  if ($p_major == 11 && $p_minor <= 2) {
     array_push($final_info, "11");
     array_push($final_to_do, "fw downgrade 11".$p_minor);
   }
