@@ -2,7 +2,7 @@
 $title = "ez3ds - Pick system model";
 include_once("_header.php");
 ?>
-<!-- images from https://github.com/Plailect/Guide/wiki/Device-Info -->
+<!-- images from https://plailect.github.io/Guide/get-started -->
 <div class="container">
   <h1 class="page-header">Pick system model</h1>
   <?php
