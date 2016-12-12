@@ -75,7 +75,7 @@ include_once("_header.php");
         <li>Once finished, return to the Homebrew Launcher by pressing L + R + B + Down on the D-Pad until the bottom screen colors change.</li>
       </ol>
 
-      <hr id="online-no-update">
+      <hr id="oor-no-update">
       <h3>Play games of other regions and avoid forced card updates</h3>
       <p>You can play games intended for other regions, and avoiding updates on game cards, using Region free launcher or HANS.</p>
       <p>There are a few limitations with this method:</p>
