@@ -36,12 +36,12 @@ $final_to_do = array();
 $final_to_do_homebrew = array();
 $final_exploits = array();
 
-$p_model = $_GET["model"];
-$p_major = $_GET["major"];
-$p_minor = $_GET["minor"];
-$p_revision = $_GET["revision"];
-$p_nver = $_GET["nver"];
-$p_region = $_GET["region"];
+$p_model = $_POST["model"];
+$p_major = $_POST["major"];
+$p_minor = $_POST["minor"];
+$p_revision = $_POST["revision"];
+$p_nver = $_POST["nver"];
+$p_region = $_POST["region"];
 
 // prevent impossible values that aren't normally selectable
 if (($p_model != "New" && $p_model != "Old") ||
@@ -50,7 +50,7 @@ if (($p_model != "New" && $p_model != "Old") ||
     ($p_revision != 0) ||
     ($p_nver < 0 || $p_nver > 35) ||
     ($p_region != "U" && $p_region != "E" && $p_region != "J")) {
-  header("Location: model?bad");
+  header("Location: model.php?bad");
   die; // no u
 }
 
@@ -116,7 +116,7 @@ if (($p_major == 1 && $p_minor == 0 && $p_nver > 0) ||   // 1.0.0-0
     ($p_major == 11 && $p_minor == 1 && $p_nver > 34) || // 11.1.0-34
     ($p_major == 11 && $p_minor == 2 && $p_nver > 35) || // 11.2.0-35
     ($p_major == 11 && $p_minor > 2)) {
-  header("Location: model?bad");
+  header("Location: model.php?bad");
   die; // no u
 }
 
@@ -168,9 +168,12 @@ if ($p_major == 8 && $p_minor == 1 && $p_nver == 0 && $p_model == "New" && $p_re
       $has_browser = false;
     }
   }
+  
+  if ($p_major == 11 && $p_minor == 2) {
+    array_push($final_info, "11");
+  }
 
   if ($p_major == 11 && $p_minor <= 2) {
-    array_push($final_info, "11");
     array_push($final_to_do, "fw downgrade 11".$p_minor);
   }
 

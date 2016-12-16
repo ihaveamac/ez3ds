@@ -5,8 +5,8 @@
       <div class="col-lg-12">
         <ul class="nav nav-pills">
           <li class="pull-right"><a href="#top">Back to top</a></li>
-          <li><a href="index">Front</a></li>
-          <li><a href="faq">FAQ</a></li>
+          <li><a href="index.php">Front</a></li>
+          <li><a href="faq.php">FAQ</a></li>
           <li><a href="https://github.com/ihaveamac/ez3ds">Website Source</a></li>
         </ul>
         <div id="footer-info">

@@ -37,7 +37,7 @@ $names = array("Nintendo 3DS", "Nintendo 3DS XL", "Nintendo 2DS", "New Nintendo 
       </div>
       <div class="modal-body">
         <p>This guide currently only covers USA/EUR/JPN regions.</p>
-        <p>If you have a lower firmware and it doesn't appear in the list, make sure you <a href="model">chose the correct model</a>.</p>
+        <p>If you have a lower firmware and it doesn't appear in the list, make sure you <a href="model.php">chose the correct model</a>.</p>
         If your firmware is somehow not listed, create an issue on <a href="https://github.com/ihaveamac/ez3ds">GitHub</a>. New firmwares will be added soon after their release.
       </div>
       <div class="modal-footer">
@@ -53,10 +53,10 @@ $names = array("Nintendo 3DS", "Nintendo 3DS XL", "Nintendo 2DS", "New Nintendo 
     <div class="col-md-4 col-sm-3 col-xs-12 center">
       <?=$names[$_GET["lv"]-1]?><br>
       <img class="console" src="img/<?=$imgs[$_GET["lv"]-1]?>.png"><br>
-      <small>Wrong model? <a class="btn btn-default btn-xs" href="model" role="button">Pick again</a></small>
+      <small>Wrong model? <a class="btn btn-default btn-xs" href="model.php" role="button">Pick again</a></small>
     </div>
     <div class="col-md-4 col-sm-6 col-xs-12 firmware">
-      <form class="firmware center" action="checkfw" method="get">
+      <form class="firmware center" action="checkfw.php" method="post">
         <input type="hidden" value="<?=$model?>" name="model">
         <p>
           <!-- default selected firmware is 11.1.0-34U -->
