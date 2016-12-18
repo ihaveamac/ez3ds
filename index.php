@@ -24,8 +24,8 @@ include_once("_header.php");
 
 <div class="jumbotron">
   <div class="container">
-    <h1>Nintendo <span id="three">3</span>DS hax helper</h1>
-    <p>Start running homebrew games, tools, and emulators on your Nintendo 3DS family system today!</p>
+    <h1><span id="three">3</span>DS hacks</h1>
+    <p>The all in 1 home for 3DS hacking!</p>
     <p>
       <div class="btn-group">
         <a class="btn btn-custom btn-lg" href="model.php" role="button">Start hax</a>
@@ -37,6 +37,20 @@ include_once("_header.php");
           <ul class="dropdown-menu">
             <li><a href="followup_homebrew.php">Homebrew</a></li>
             <li class="disabled"><a href="followup_cfw">Custom Firmware (Coming soon!)</a></li>
+          </ul>
+        </div>
+		<div class="btn-group">
+          <button type="button" class="btn btn-success btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Forums <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="http://forums.3dshacks.xyz/board/">Homebrew</a></li>
+            <li><a href="http://forums.3dshacks.xyz/ranks/">Ranks</a></li>
+			<li><a href="http://forums.3dshacks.xyz/faq/">FAQ</a></li>
+			<li><a href="http://forums.3dshacks.xyz/memberlist/">Members</a></li>
+			<li><a href="http://forums.3dshacks.xyz/online/">Online</a></li>
+			<li><a href="http://forums.3dshacks.xyz/lastposts/">Last Posts</a></li>
+			<li><a href="http://forums.3dshacks.xyz/search/">Search</a></li>
           </ul>
         </div>
       </div>

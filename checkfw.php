@@ -169,9 +169,9 @@ if ($p_major == 8 && $p_minor == 1 && $p_nver == 0 && $p_model == "New" && $p_re
     }
   }
   
-  if ($p_major == 11 && $p_minor == 2) {
-    array_push($final_info, "11");
-  }
+	if ($p_major == 11 && $p_minor == 2) {
+		array_push($final_info, "11");
+	}
 
   if ($p_major == 11 && $p_minor <= 2) {
     array_push($final_to_do, "fw downgrade 11".$p_minor);
