@@ -20,21 +20,6 @@ $to_do = array(
     "link" => "https://plailect.github.io/Guide/cart-update",
     "link-desc" => "Cart Update"
   ),
-  "fw downgrade 110" => array(
-    "desc" => "Downgrade NFIRM from 11.0.0 to 10.4.0. This won't change the version shown in System Settings. However, this will enable downgrading further to 9.2.0.",
-    "link" => "https://plailect.github.io/Guide/nfirm-downgrade",
-    "link-desc" => "NFIRM Downgrade"
-  ),
-  "fw downgrade 111" => array(
-    "desc" => "Downgrade NFIRM from 11.1.0 to 10.4.0. This won't change the version shown in System Settings. However, this will enable downgrading further to 9.2.0.",
-    "link" => "https://plailect.github.io/Guide/nfirm-downgrade",
-    "link-desc" => "NFIRM Downgrade"
-  ),
-  "fw downgrade 112" => array(
-    "desc" => "Downgrade NFIRM from 11.2.0 to 10.4.0. This won't change the version shown in System Settings. However, this will enable downgrading further to 9.2.0.",
-    "link" => "https://plailect.github.io/Guide/nfirm-downgrade",
-    "link-desc" => "NFIRM Downgrade"
-  ),
   "new jpn 81 update" => array(
     "desc" => "Update the system to 9.2.0 using the NTR CFW and Cubic Ninja method.",
     "link" => "https://plailect.github.io/Guide/ntr-and-cubic-ninja",
@@ -49,11 +34,6 @@ $to_do = array(
     "desc" => "Use one of the exploits below to use the Homebrew Launcher.",
     "link" => "https://plailect.github.io/Guide/homebrew-launcher-(no-browser)",
     "link-desc" => "Homebrew Launcher (No Browser)"
-  ),
-  "92 downgrade" => array(
-    "desc" => "Downgrade to 9.2.0.",
-    "link" => "https://plailect.github.io/Guide/9.2.0-downgrade",
-    "link-desc" => "9.2.0 Downgrade"
   ),
   "d9 browser" => array(
     "desc" => "Enter Decrypt9, using the Internet Browser.",

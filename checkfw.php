@@ -13,7 +13,7 @@ $to_do_homebrew = array(
     "desc" => "Copy <code>boot.3dsx</code> and <code>3ds</code> to the root of your 3DS SD card."
   ),
   "enter hbl browser" => array(
-    "desc" => "Use the Internet Browser (or other exploit) to use the Homebrew Launcher.<br>The QR code can be scanned at the HOME Menu by pressing L+R for the Camera.<br>If the exploit is unstable, try resetting the browser data first.",
+    "desc" => "Use the Internet Browser (or the other exploits) to use the Homebrew Launcher.<br>The QR code can be scanned at the HOME Menu by pressing L+R for the Camera.<br>If the exploit is unstable, try resetting the browser data first.",
     "image" => "https://yls8.mtheall.com/3dsbrowserhax_auto_qrcode.png",
     "link" => "https://yls8.mtheall.com/3dsbrowserhax.php",
     "link-desc" => "Nintendo 3DS web-browser exploits"
@@ -22,7 +22,7 @@ $to_do_homebrew = array(
     "desc" => "Use one of the exploits below to use the Homebrew Launcher."
   ),
   "install secondary" => array(
-    "desc" => "<i>Recommended</i> - Install a secondary entrypoint. This is especially important if using browserhax, due to the version check and general instability. Note the date-time bypass (setting the date back to get around the version check) has been fixed since 10.7.0-32."
+    "desc" => "<i>Recommended</i> - Install a secondary entrypoint. This is especially important if using browserhax, due to the version check and general instability. Note the date-time bypass (setting the date back to get around the version check) has been fixed since 10.7.0-32. If available, the recommended secondary exploit is menuhax."
   ),
   "follow up homebrew" => array(
     "desc" => "Check out the Follow up guide on what to do next.",
@@ -168,22 +168,12 @@ if ($p_major == 8 && $p_minor == 1 && $p_nver == 0 && $p_model == "New" && $p_re
       $has_browser = false;
     }
   }
-  
-	if ($p_major == 11 && $p_minor == 2) {
-		array_push($final_info, "11");
-	}
-
-  if ($p_major == 11 && $p_minor <= 2) {
-    array_push($final_to_do, "fw downgrade 11".$p_minor);
-  }
 
   if (($p_major > 9 || ($p_major == 9 && $p_minor > 2 ))) {
     if ($has_browser) {
       array_push($final_to_do, "hbl browser");
-      array_push($final_to_do, "92 downgrade");
     } else {
       array_push($final_to_do, "hbl no browser");
-      array_push($final_to_do, "92 downgrade");
     }
   } else {
     if ($p_major == 9) {
@@ -211,7 +201,6 @@ if ($p_major == 8 && $p_minor == 1 && $p_nver == 0 && $p_model == "New" && $p_re
         } else {
           array_push($final_to_do, "90 to 107 update");
           array_push($final_to_do, "hbl no browser");
-          array_push($final_to_do, "92 downgrade");
         }
       }
     }

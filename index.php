@@ -39,20 +39,8 @@ include_once("_header.php");
             <li class="disabled"><a href="followup_cfw">Custom Firmware (Coming soon!)</a></li>
           </ul>
         </div>
-		<div class="btn-group">
-          <button type="button" class="btn btn-success btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Forums <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu">
-            <li><a href="http://forums.3dshacks.xyz/board/">Homebrew</a></li>
-            <li><a href="http://forums.3dshacks.xyz/ranks/">Ranks</a></li>
-			<li><a href="http://forums.3dshacks.xyz/faq/">FAQ</a></li>
-			<li><a href="http://forums.3dshacks.xyz/memberlist/">Members</a></li>
-			<li><a href="http://forums.3dshacks.xyz/online/">Online</a></li>
-			<li><a href="http://forums.3dshacks.xyz/lastposts/">Last Posts</a></li>
-			<li><a href="http://forums.3dshacks.xyz/search/">Search</a></li>
-          </ul>
-        </div>
+		<a class="btn btn-primary btn-lg" href="/forums/" role="button">Forums</a>
+		<a class="btn btn-custom btn-lg" href="/blog/" role="button">Blog</a>
       </div>
     </p>
   </div>
