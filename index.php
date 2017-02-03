@@ -39,8 +39,6 @@ include_once("_header.php");
             <li class="disabled"><a href="followup_cfw">Custom Firmware (Coming soon!)</a></li>
           </ul>
         </div>
-		<a class="btn btn-primary btn-lg" href="/forums/" role="button">Forums</a>
-		<a class="btn btn-custom btn-lg" href="/blog/" role="button">Blog</a>
       </div>
     </p>
   </div>
