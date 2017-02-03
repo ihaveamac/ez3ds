@@ -24,18 +24,18 @@ include_once("_header.php");
 
 <div class="jumbotron">
   <div class="container">
-    <h1>Nintendo <span id="three">3</span>DS hax helper</h1>
-    <p>Start running homebrew games, tools, and emulators on your Nintendo 3DS family system today!</p>
+    <h1><span id="three">3</span>DS hacks</h1>
+    <p>The all in 1 home for 3DS hacking!</p>
     <p>
       <div class="btn-group">
-        <a class="btn btn-custom btn-lg" href="model" role="button">Start hax</a>
-        <a class="btn btn-primary btn-lg" href="faq" role="button">FAQ</a>
+        <a class="btn btn-custom btn-lg" href="model.php" role="button">Start hax</a>
+        <a class="btn btn-primary btn-lg" href="/faq/" role="button">FAQ</a>
         <div class="btn-group">
           <button type="button" class="btn btn-success btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Follow up <span class="caret"></span>
           </button>
           <ul class="dropdown-menu">
-            <li><a href="followup_homebrew">Homebrew</a></li>
+            <li><a href="followup_homebrew.php">Homebrew</a></li>
             <li class="disabled"><a href="followup_cfw">Custom Firmware (Coming soon!)</a></li>
           </ul>
         </div>
@@ -82,6 +82,6 @@ include_once("_header.php");
   <h2>Support</h2>
   <p>For issues with this website, <a href="https://github.com/ihaveamac/ez3ds/issues" target="_blank">create a new issue on GitHub</a>.</p>
   <p>For issues/assistance with other things (using entry points, etc.), come join us on the <a href="https://gate.omicron.pw">#3dshacks</a> IRC channel on Rizon or <a href="https://discord.gg/MWxPgEp" target="_blank">3DS Hacking</a> Discord.</p>
-  <p>Be sure to also check out the <a href="faq">Frequently Asked Questions</a>.</p>
+  <p>Be sure to also check out the <a href="/faq/">Frequently Asked Questions</a>.</p>
 </div>
 <?php include_once("_footer.php"); ?>
